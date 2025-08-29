@@ -1,0 +1,45 @@
+[project]
+name = "odoo-bringout-odoomates-om_account_accountant"
+version = "16.0.0"
+description = "Odoo 16 Accounting - Accounting Reports, Asset Management and Account Budget, Recurring Payments, Lock Dates, Fiscal Year For Odoo 16 Community Edition, Accounting Dashboard, Financial Reports, Customer Follow up Management, Bank Statement Import, Odoo Budget"
+authors = [
+    { name = "Ernad Husremovic", email = "hernad@bring.out.ba" }
+]
+dependencies = [
+    "odoo-bringout-odoomates-accounting_pdf_reports>=16.0.0",
+    "odoo-bringout-odoomates-om_account_budget>=16.0.0",
+    "odoo-bringout-odoomates-om_recurring_payments>=16.0.0",
+    "odoo-bringout-odoomates-om_account_daily_reports>=16.0.0",
+    "requests>=2.25.1"
+]
+readme = "README.md"
+requires-python = ">= 3.11"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11", 
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business",
+]
+
+[project.urls]
+homepage = "https://github.com/bringout/0"
+repository = "https://github.com/bringout/0"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["om_account_accountant"]
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pytest>=8.4.1",
+]

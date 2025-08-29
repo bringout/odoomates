@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_account_journal_form" model="ir.ui.view">
+        <field name="name">account.journal</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='inbound_payment_method_line_ids']/tree/field[@name='payment_account_id']" position="attributes">
+                <attribute name="optional">show</attribute>
+            </xpath>
+            <xpath expr="//field[@name='outbound_payment_method_line_ids']/tree/field[@name='payment_account_id']" position="attributes">
+                <attribute name="optional">show</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!--
+       <record id="view_account_move_line_filter" model="ir.ui.view">
+            <field name="name">account.move.line.search</field>
+            <field name="model">account.move.line</field>
+
+            ...   misc_filter ...
+            <filter string="Miscellaneous" domain="[('journal_id.type', '=', 'general')]" name="misc_filter" context="{'default_journal_type': 'general'}"/>
+             ...       
+    -->        
+
+        <!-- equiment.request : views -->
+    <record id="account_view_account_move_line_filter_inherit" model="ir.ui.view">
+        <field name="name">account.move.line.search</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_account_move_line_filter"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//filter[@name='misc_filter']" position="after">
+                <filter string="PST" name="pst_filter" domain="[('journal_id.code', '=', 'PST')]"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="action_account_moves_journal_pst" model="ir.actions.act_window">
+            <field name="context">{'search_default_group_by_move': 1, 'search_default_posted':1, 'search_default_pst_filter':1, 'expand': 1}</field>
+            <field name="name">Početna stanja</field>
+            <field name="res_model">account.move.line</field>
+            <field name="domain">[('display_type', 'not in', ('line_section', 'line_note'))]</field>
+            <field name="view_id" ref="account.view_move_line_tree_grouped_misc"/>
+            <field name="view_mode">tree,pivot,graph,kanban</field>
+    </record>
+
+</odoo>
