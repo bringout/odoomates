@@ -2,7 +2,7 @@
 
 This addon depends on:
 
-- [sale](../../../../../oca-ocb-sale/odoo-bringout-oca-ocb-sale)
-- [mail](../../../../../oca-ocb-core/odoo-bringout-oca-ocb-mail)
-- [website_slides](../../../../../oca-ocb-website/odoo-bringout-oca-ocb-website_slides)
-- [hr](../../../../../oca-ocb-hr/odoo-bringout-oca-ocb-hr)
+- [sale](https://github.com/bringout/oca-ocb-sale)
+- [mail](https://github.com/bringout/oca-ocb-core)
+- [website_slides](https://github.com/bringout/oca-ocb-website)
+- [hr](https://github.com/bringout/oca-ocb-hr)

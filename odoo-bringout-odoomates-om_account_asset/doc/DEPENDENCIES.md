@@ -2,4 +2,4 @@
 
 This addon depends on:
 
-- [account](../../../../../oca-ocb-accounting/odoo-bringout-oca-ocb-account)
+- [account](https://github.com/bringout/oca-ocb-accounting)
