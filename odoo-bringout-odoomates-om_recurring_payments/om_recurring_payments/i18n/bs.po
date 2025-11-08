@@ -17,28 +17,25 @@ msgstr ""
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__amount
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment_line__amount
 msgid "Amount"
 msgstr "Iznos"
 
 #. module: om_recurring_payments
 #. odoo-python
-#: code:addons/om_recurring_payments/models/recurring_payment.py:0
+#: code:addons/om_recurring_payments/models/recurring_payment.py
 #, python-format
 msgid "Amount Must Be Non-Zero Positive Number"
 msgstr "Iznos Mora Be Non-Zero Positive Broj"
 
 #. module: om_recurring_payments
 #. odoo-python
-#: code:addons/om_recurring_payments/models/recurring_payment.py:0
+#: code:addons/om_recurring_payments/models/recurring_payment.py
 #, python-format
 msgid "Cannot delete done records !"
 msgstr "Cannot Obriši Završeno records !"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__company_id
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__company_id
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment_line__company_id
 msgid "Company"
 msgstr "Preduzeće"
 
@@ -54,21 +51,16 @@ msgstr "Kreiraj plaćanje"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__create_uid
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__create_uid
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment_line__create_uid
 msgid "Created by"
 msgstr "Kreirao"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__create_date
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__create_date
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment_line__create_date
 msgid "Created on"
 msgstr "Kreirano"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__currency_id
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment_line__currency_id
 msgid "Currency"
 msgstr "Valuta"
 
@@ -84,35 +76,26 @@ msgstr "Dani"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__description
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__description
 msgid "Description"
 msgstr "Opis"
 
 #. module: om_recurring_payments
 #: model_terms:ir.ui.view,arch_db:om_recurring_payments.view_recurring_payment_form
-#: model_terms:ir.ui.view,arch_db:om_recurring_payments.view_recurring_template_form
 msgid "Description..."
 msgstr "Opis ..."
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__display_name
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__display_name
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment_line__display_name
 msgid "Display Name"
 msgstr "Prikazani naziv"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields.selection,name:om_recurring_payments.selection__account_recurring_template__state__done
-#: model:ir.model.fields.selection,name:om_recurring_payments.selection__recurring_payment__state__done
-#: model:ir.model.fields.selection,name:om_recurring_payments.selection__recurring_payment_line__state__done
-#: model_terms:ir.ui.view,arch_db:om_recurring_payments.view_recurring_payment_form
 msgid "Done"
 msgstr "Gotovo"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields.selection,name:om_recurring_payments.selection__account_recurring_template__state__draft
-#: model:ir.model.fields.selection,name:om_recurring_payments.selection__recurring_payment__state__draft
-#: model:ir.model.fields.selection,name:om_recurring_payments.selection__recurring_payment_line__state__draft
 msgid "Draft"
 msgstr "U pripremi"
 
@@ -123,48 +106,36 @@ msgstr "Datum završetka"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__journal_state
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__journal_state
 msgid "Generate Journal As"
 msgstr "Generate Dnevnik As"
 
 #. module: om_recurring_payments
 #: model:ir.actions.server,name:om_recurring_payments.action_generate_recurring_payment_ir_actions_server
-#: model:ir.cron,cron_name:om_recurring_payments.action_generate_recurring_payment
 msgid "Generate Recurring Payments"
 msgstr "Generate Recurring Plaćanja"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__id
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__id
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment_line__id
 msgid "ID"
 msgstr "ID"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__journal_id
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__journal_id
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment_line__journal_id
 msgid "Journal"
 msgstr "Vrsta naloga"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template____last_update
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment____last_update
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment_line____last_update
 msgid "Last Modified on"
 msgstr "Zadnje mijenjano"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__write_uid
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__write_uid
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment_line__write_uid
 msgid "Last Updated by"
 msgstr "Zadnji ažurirao"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__write_date
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__write_date
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment_line__write_date
 msgid "Last Updated on"
 msgstr "Zadnje ažurirano"
 
@@ -175,21 +146,18 @@ msgstr "Mjeseci"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__name
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__name
 msgid "Name"
 msgstr "Naziv:"
 
 #. module: om_recurring_payments
 #. odoo-python
-#: code:addons/om_recurring_payments/models/recurring_payment.py:0
-#: code:addons/om_recurring_payments/models/recurring_payment.py:0
+#: code:addons/om_recurring_payments/models/recurring_payment.py
 #, python-format
 msgid "New"
 msgstr "Novi"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__partner_id
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment_line__partner_id
 msgid "Partner"
 msgstr "Partner"
 
@@ -220,7 +188,6 @@ msgstr "Recurring Stavke"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__recurring_interval
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__recurring_interval
 msgid "Recurring Interval"
 msgstr "Recurring Interval"
 
@@ -231,16 +198,11 @@ msgstr "Recurring Lines"
 
 #. module: om_recurring_payments
 #: model:ir.actions.act_window,name:om_recurring_payments.action_account_recurring_payment
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment_line__recurring_payment_id
-#: model:ir.ui.menu,name:om_recurring_payments.menu_recurring_payment
-#: model:ir.ui.menu,name:om_recurring_payments.menu_recurring_payments
-#: model_terms:ir.ui.view,arch_db:om_recurring_payments.view_recurring_payment_form
 msgid "Recurring Payment"
 msgstr "Recurring Plaćanje"
 
 #. module: om_recurring_payments
 #: model:ir.model,name:om_recurring_payments.model_recurring_payment_line
-#: model_terms:ir.ui.view,arch_db:om_recurring_payments.view_recurring_payment_form
 msgid "Recurring Payment Line"
 msgstr "Recurring Plaćanje Line"
 
@@ -256,17 +218,11 @@ msgstr "Recurring Plaćanja"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__recurring_period
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__recurring_period
 msgid "Recurring Period"
 msgstr "Recurring Period"
 
 #. module: om_recurring_payments
 #: model:ir.actions.act_window,name:om_recurring_payments.action_account_recurring_template
-#: model:ir.model,name:om_recurring_payments.model_account_recurring_template
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__template_id
-#: model:ir.ui.menu,name:om_recurring_payments.menu_recurring_template
-#: model_terms:ir.ui.view,arch_db:om_recurring_payments.view_account_recurring_template_tree
-#: model_terms:ir.ui.view,arch_db:om_recurring_payments.view_recurring_template_form
 msgid "Recurring Template"
 msgstr "Recurring Šablon"
 
@@ -277,7 +233,6 @@ msgstr "Slanje novca"
 
 #. module: om_recurring_payments
 #: model_terms:ir.ui.view,arch_db:om_recurring_payments.view_recurring_payment_form
-#: model_terms:ir.ui.view,arch_db:om_recurring_payments.view_recurring_template_form
 msgid "Set To Draft"
 msgstr "Stavi u pripremu"
 
@@ -288,8 +243,6 @@ msgstr "Početni datum"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__state
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__state
-#: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment_line__state
 msgid "Status"
 msgstr "Status"
 
@@ -310,7 +263,8 @@ msgstr "Godine"
 
 #. module: om_recurring_payments
 #. odoo-python
-#: code:addons/om_recurring_payments/models/recurring_payment.py:0
+#: code:addons/om_recurring_payments/models/recurring_payment.py
 #, python-format
 msgid "You cannot Set to Draft as one of the line is already in done state"
-msgstr "You cannot Set to Nacrt as one of the line is already in Završeno state"
+msgstr ""
+"You cannot Set to Nacrt as one of the line is already in Završeno state"

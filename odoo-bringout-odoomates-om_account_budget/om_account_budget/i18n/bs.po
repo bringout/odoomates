@@ -17,21 +17,25 @@ msgstr ""
 
 #. module: om_account_budget
 #. odoo-python
-#: code:addons/om_account_budget/models/account_budget.py:0
+#: code:addons/om_account_budget/models/account_budget.py
 #, python-format
 msgid ""
 "\"End Date\" of the budget line should be included in the Period of the "
 "budget"
 msgstr ""
+"\"End Datum\" of the budget line should be included in the Period of the "
+"budget"
 
 #. module: om_account_budget
 #. odoo-python
-#: code:addons/om_account_budget/models/account_budget.py:0
+#: code:addons/om_account_budget/models/account_budget.py
 #, python-format
 msgid ""
 "\"Start Date\" of the budget line should be included in the Period of the "
 "budget"
 msgstr ""
+"\"Start Datum\" of the budget line should be included in the Period of the "
+"budget"
 
 #. module: om_account_budget
 #: model_terms:ir.ui.view,arch_db:om_account_budget.view_crossovered_budget_kanban
@@ -40,7 +44,6 @@ msgstr "<i class=\"fa fa-clock-o\" role=\"img\" aria-label=\"Period\" title=\"Pe
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post__account_ids
-#: model_terms:ir.ui.view,arch_db:om_account_budget.view_budget_post_form
 msgid "Accounts"
 msgstr "Konta"
 
@@ -70,10 +73,11 @@ msgid ""
 "Amount you plan to earn/spend. Record a positive amount if it is a revenue "
 "and a negative amount if it is a cost."
 msgstr ""
+"Amount you plan to earn/spend. Record a positive amount if it is a revenue "
+"and a negative amount if it is a cost."
 
 #. module: om_account_budget
 #: model:ir.model,name:om_account_budget.model_account_analytic_account
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget_lines__analytic_account_id
 msgid "Analytic Account"
 msgstr "Analitički konto"
 
@@ -94,16 +98,11 @@ msgstr "Broj priloga"
 
 #. module: om_account_budget
 #: model:ir.model,name:om_account_budget.model_crossovered_budget
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget_lines__crossovered_budget_id
-#: model_terms:ir.ui.view,arch_db:om_account_budget.crossovered_budget_view_form
-#: model_terms:ir.ui.view,arch_db:om_account_budget.crossovered_budget_view_tree
-#: model_terms:ir.ui.view,arch_db:om_account_budget.view_crossovered_budget_search
 msgid "Budget"
 msgstr "Budžet"
 
 #. module: om_account_budget
 #: model:ir.actions.act_window,name:om_account_budget.act_account_analytic_account_cb_lines
-#: model_terms:ir.ui.view,arch_db:om_account_budget.view_account_analytic_account_form_inherit_budget
 msgid "Budget Items"
 msgstr "Stavke budžeta"
 
@@ -114,19 +113,11 @@ msgstr "Budžet Stavka"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_analytic_account__crossovered_budget_line
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__crossovered_budget_line
-#: model_terms:ir.ui.view,arch_db:om_account_budget.crossovered_budget_view_form
-#: model_terms:ir.ui.view,arch_db:om_account_budget.view_crossovered_budget_line_form
-#: model_terms:ir.ui.view,arch_db:om_account_budget.view_crossovered_budget_line_graph
-#: model_terms:ir.ui.view,arch_db:om_account_budget.view_crossovered_budget_line_pivot
-#: model_terms:ir.ui.view,arch_db:om_account_budget.view_crossovered_budget_line_search
-#: model_terms:ir.ui.view,arch_db:om_account_budget.view_crossovered_budget_line_tree
 msgid "Budget Lines"
 msgstr "Linije budžeta"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__name
-#: model_terms:ir.ui.view,arch_db:om_account_budget.crossovered_budget_view_form
 msgid "Budget Name"
 msgstr "Budžet Naziv"
 
@@ -137,29 +128,21 @@ msgstr "Budžet Stanje"
 
 #. module: om_account_budget
 #: model:ir.model,name:om_account_budget.model_account_budget_post
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget_lines__general_budget_id
-#: model_terms:ir.ui.view,arch_db:om_account_budget.view_budget_post_form
-#: model_terms:ir.ui.view,arch_db:om_account_budget.view_budget_post_search
-#: model_terms:ir.ui.view,arch_db:om_account_budget.view_budget_post_tree
 msgid "Budgetary Position"
 msgstr "Budžetary Position"
 
 #. module: om_account_budget
 #: model:ir.actions.act_window,name:om_account_budget.open_budget_post_form
-#: model:ir.ui.menu,name:om_account_budget.menu_budget_post_form
 msgid "Budgetary Positions"
 msgstr "Budžetary Positions"
 
 #. module: om_account_budget
 #: model:ir.actions.act_window,name:om_account_budget.act_crossovered_budget_view
-#: model:ir.ui.menu,name:om_account_budget.menu_act_crossovered_budget_view
-#: model_terms:ir.ui.view,arch_db:om_account_budget.view_crossovered_budget_line_search
 msgid "Budgets"
 msgstr "Budžeti"
 
 #. module: om_account_budget
 #: model:ir.actions.act_window,name:om_account_budget.act_crossovered_budget_lines_view
-#: model:ir.ui.menu,name:om_account_budget.menu_act_crossovered_budget_lines_view
 msgid "Budgets Analysis"
 msgstr "Budžets Analiza"
 
@@ -180,8 +163,6 @@ msgstr "Click to create a new budget."
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post__company_id
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__company_id
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget_lines__company_id
 msgid "Company"
 msgstr "Preduzeće"
 
@@ -191,6 +172,8 @@ msgid ""
 "Comparison between practical and theoretical amount. This measure tells you "
 "if you are below or over budget."
 msgstr ""
+"Comparison between practical and theoretical amount. This measure tells you "
+"if you are below or over budget."
 
 #. module: om_account_budget
 #: model_terms:ir.ui.view,arch_db:om_account_budget.crossovered_budget_view_form
@@ -204,15 +187,11 @@ msgstr "Potvrđeno"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post__create_uid
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__create_uid
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget_lines__create_uid
 msgid "Created by"
 msgstr "Kreirao"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post__create_date
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__create_date
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget_lines__create_date
 msgid "Created on"
 msgstr "Kreirano"
 
@@ -223,20 +202,16 @@ msgstr "Valuta"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post__display_name
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__display_name
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget_lines__display_name
 msgid "Display Name"
 msgstr "Prikazani naziv"
 
 #. module: om_account_budget
 #: model:ir.model.fields.selection,name:om_account_budget.selection__crossovered_budget__state__done
-#: model_terms:ir.ui.view,arch_db:om_account_budget.crossovered_budget_view_form
 msgid "Done"
 msgstr "Gotovo"
 
 #. module: om_account_budget
 #: model:ir.model.fields.selection,name:om_account_budget.selection__crossovered_budget__state__draft
-#: model_terms:ir.ui.view,arch_db:om_account_budget.view_crossovered_budget_search
 msgid "Draft"
 msgstr "U pripremi"
 
@@ -247,7 +222,6 @@ msgstr "Nacrt Budžets"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__date_to
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget_lines__date_to
 msgid "End Date"
 msgstr "Datum završetka"
 
@@ -278,8 +252,6 @@ msgstr "Ima poruku"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post__id
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__id
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget_lines__id
 msgid "ID"
 msgstr "ID"
 
@@ -305,22 +277,16 @@ msgstr "Pratilac"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post____last_update
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget____last_update
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget_lines____last_update
 msgid "Last Modified on"
 msgstr "Zadnje mijenjano"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post__write_uid
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__write_uid
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget_lines__write_uid
 msgid "Last Updated by"
 msgstr "Zadnji ažurirao"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post__write_date
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__write_date
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget_lines__write_date
 msgid "Last Updated on"
 msgstr "Zadnje ažurirano"
 
@@ -341,7 +307,6 @@ msgstr "Poruke"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post__name
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget_lines__name
 msgid "Name"
 msgstr "Naziv:"
 
@@ -382,26 +347,21 @@ msgstr "Period"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget_lines__planned_amount
-#: model_terms:ir.ui.view,arch_db:om_account_budget.crossovered_budget_view_form
 msgid "Planned Amount"
 msgstr "Planirano Iznos"
 
 #. module: om_account_budget
 #: model_terms:ir.ui.view,arch_db:om_account_budget.view_crossovered_budget_line_graph
-#: model_terms:ir.ui.view,arch_db:om_account_budget.view_crossovered_budget_line_pivot
 msgid "Planned amount"
 msgstr "Planirano amount"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget_lines__practical_amount
-#: model_terms:ir.ui.view,arch_db:om_account_budget.crossovered_budget_view_form
-#: model_terms:ir.ui.view,arch_db:om_account_budget.view_account_analytic_account_form_inherit_budget
 msgid "Practical Amount"
 msgstr "Practical Iznos"
 
 #. module: om_account_budget
 #: model_terms:ir.ui.view,arch_db:om_account_budget.view_crossovered_budget_line_graph
-#: model_terms:ir.ui.view,arch_db:om_account_budget.view_crossovered_budget_line_pivot
 msgid "Practical amount"
 msgstr "Practical amount"
 
@@ -417,7 +377,6 @@ msgstr "Odgovoran"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__date_from
-#: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget_lines__date_from
 msgid "Start Date"
 msgstr "Početni datum"
 
@@ -428,16 +387,15 @@ msgstr "Status"
 
 #. module: om_account_budget
 #. odoo-python
-#: code:addons/om_account_budget/models/account_budget.py:0
+#: code:addons/om_account_budget/models/account_budget.py
 #, python-format
 msgid "The budget must have at least one account."
 msgstr "The budget must have at least one account."
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget_lines__theoritical_amount
-#: model_terms:ir.ui.view,arch_db:om_account_budget.crossovered_budget_view_form
 msgid "Theoretical Amount"
-msgstr "Theoretical Iznos"
+msgstr "Predviđeni iznos"
 
 #. module: om_account_budget
 #: model_terms:ir.ui.view,arch_db:om_account_budget.view_account_analytic_account_form_inherit_budget
@@ -446,7 +404,6 @@ msgstr "Theoritical Iznos"
 
 #. module: om_account_budget
 #: model_terms:ir.ui.view,arch_db:om_account_budget.view_crossovered_budget_line_graph
-#: model_terms:ir.ui.view,arch_db:om_account_budget.view_crossovered_budget_line_pivot
 msgid "Theoritical amount"
 msgstr "Theoritical amount"
 
@@ -463,7 +420,9 @@ msgstr "To Approve Budžets"
 #. module: om_account_budget
 #: model_terms:ir.actions.act_window,help:om_account_budget.act_crossovered_budget_view
 msgid "Use budgets to compare actual with expected revenues and costs"
-msgstr "Koristite proračune za usporedbu stvarnih s očekivanim prihodima i troškovima"
+msgstr ""
+"Koristite proračune za usporedbu stvarnih s očekivanim prihodima i "
+"troškovima"
 
 #. module: om_account_budget
 #: model:ir.model.fields.selection,name:om_account_budget.selection__crossovered_budget__state__validate
@@ -482,9 +441,11 @@ msgstr "Povijest komunikacije Web stranice"
 
 #. module: om_account_budget
 #. odoo-python
-#: code:addons/om_account_budget/models/account_budget.py:0
+#: code:addons/om_account_budget/models/account_budget.py
 #, python-format
 msgid ""
 "You have to enter at least a budgetary position or analytic account on a "
 "budget line."
 msgstr ""
+"You have to enter at least a budgetary position or analytic account on a "
+"budget line."

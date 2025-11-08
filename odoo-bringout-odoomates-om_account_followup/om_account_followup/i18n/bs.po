@@ -47,6 +47,34 @@ msgid ""
 "</div>\n"
 "            "
 msgstr ""
+"\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); \">\n"
+"\n"
+"    <p>Dear ${object.name},</p>\n"
+"    <p>\n"
+"    Exception made if there was a mistake of ours, it seems that the following amount stays unpaid. Please, take\n"
+"appropriate measures in order to carry out this payment in the next 8 days.\n"
+"\n"
+"Would your payment have been carried out after this mail was sent, please ignore this message. Do not hesitate to\n"
+"contact our accounting department.  \n"
+"\n"
+"    </p>\n"
+"<br/>\n"
+"Best Regards,\n"
+"<br/>\n"
+"   <br/>\n"
+"${user.name}\n"
+"\n"
+"<br/>\n"
+"<br/>\n"
+"\n"
+"\n"
+"${object.get_followup_table_html() | safe}\n"
+"\n"
+"    <br/>\n"
+"\n"
+"</div>\n"
+"            "
 
 #. module: om_account_followup
 #: model:mail.template,body_html:om_account_followup.email_template_om_account_followup_level1
@@ -81,6 +109,35 @@ msgid ""
 "</div>\n"
 "            "
 msgstr ""
+"\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); \">\n"
+"    \n"
+"    <p>Poštovani 5 ${object.name},</p>\n"
+"   <p>\n"
+"    We are disappointed to see that despite sending a reminder, that your account is now seriously overdue.\n"
+"It is essential that immediate payment is made, otherwise we will have to consider placing a stop on your account\n"
+"which means that we will no longer be able to supply your company with (goods/services).\n"
+"Please, take appropriate measures in order to carry out this payment in the next 8 days.\n"
+"If there is a problem with paying invoice that we are not aware of, do not hesitate to contact our accounting\n"
+"department. so that we can resolve the matter quickly.\n"
+"Details of due payments is printed below.\n"
+" </p>\n"
+"<br/>\n"
+"Lijep pozdrav,\n"
+"    \n"
+"<br/>\n"
+"<br/>\n"
+"${user.name}\n"
+"    \n"
+"<br/>\n"
+"<br/>\n"
+"\n"
+"${object.get_followup_table_html() | safe}\n"
+"\n"
+"    <br/>\n"
+"\n"
+"</div>\n"
+"            "
 
 #. module: om_account_followup
 #: model:mail.template,body_html:om_account_followup.email_template_om_account_followup_level2
@@ -112,6 +169,32 @@ msgid ""
 "</div>\n"
 "            "
 msgstr ""
+"\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); \">\n"
+"    \n"
+"    <p>Poštovani 6 ${object.name},</p>\n"
+"    <p>\n"
+"    Despite several reminders, your account is still not settled.\n"
+"Unless full payment is made in next 8 days, legal action for the recovery of the debt will be taken without\n"
+"further notice.\n"
+"I trust that this action will prove unnecessary and details of due payments is printed below.\n"
+"In case of any queries concerning this matter, do not hesitate to contact our accounting department.\n"
+"</p>\n"
+"<br/>\n"
+"Lijep pozdrav,\n"
+"<br/>\n"
+"<br/>\n"
+"${user.name}\n"
+"<br/>\n"
+"<br/>\n"
+"\n"
+"\n"
+"${object.get_followup_table_html() | safe}\n"
+"\n"
+"    <br/>\n"
+"\n"
+"</div>\n"
+"            "
 
 #. module: om_account_followup
 #: model:mail.template,body_html:om_account_followup.email_template_om_account_followup_default
@@ -140,6 +223,28 @@ msgid ""
 "</div>\n"
 "            "
 msgstr ""
+"\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); \">\n"
+"    \n"
+"    <p>Poštovani ${object.name},</p>\n"
+"    <p>\n"
+"    Prema našoj evidenciji postoje neizvršena plaćanja.\n"
+"Molimo da u nakjraćem roku izmirite svoje dugovanje.\n"
+"Za sva pitanja smo Vam na raspolaganju.\n"
+"    </p>\n"
+"<br/>\n"
+"Lijep pozdrav,\n"
+"<br/>\n"
+"<br/>\n"
+"${user.name}\n"
+"<br/>\n"
+"<br/>\n"
+"\n"
+"${object.get_followup_table_html() | safe}\n"
+"\n"
+"<br/>\n"
+"</div>\n"
+"            "
 
 #. module: om_account_followup
 #: model:followup.line,description:om_account_followup.demo_followup_line1
@@ -158,6 +263,19 @@ msgid ""
 "Best Regards,\n"
 "            "
 msgstr ""
+"\n"
+" %(partner_name)s,\n"
+"\n"
+"Exception made if there was a mistake of ours, it seems that\n"
+"the following amount stays unpaid. Please, take appropriate\n"
+"measures in order to carry out this payment in the next 8 days.\n"
+"\n"
+"Would your payment have been carried out after this mail was\n"
+"sent, please ignore this message. Do not hesitate to contact\n"
+"our accounting department.\n"
+"\n"
+"Best Regards,\n"
+"            "
 
 #. module: om_account_followup
 #: model:followup.line,description:om_account_followup.demo_followup_line2
@@ -184,6 +302,27 @@ msgid ""
 "Best Regards,\n"
 "            "
 msgstr ""
+"\n"
+"Poštovani 2 %(partner_name)s,\n"
+"\n"
+"We are disappointed to see that despite sending a reminder,\n"
+"that your account is now seriously overdue.\n"
+"\n"
+"It is essential that immediate payment is made, otherwise we\n"
+"will have to consider placing a stop on your account which\n"
+"means that we will no longer be able to supply your company\n"
+"with (goods/services).\n"
+"Please, take appropriate measures in order to carry out this\n"
+"payment in the next 8 days.\n"
+"\n"
+"If there is a problem with paying invoice that we are not aware\n"
+"of, do not hesitate to contact our accounting department, so\n"
+"that we can resolve the matter quickly.\n"
+"\n"
+"Details of due payments is printed below.\n"
+"\n"
+"Best Regards,\n"
+"            "
 
 #. module: om_account_followup
 #: model:followup.line,description:om_account_followup.demo_followup_line3
@@ -206,60 +345,74 @@ msgid ""
 "Best Regards,\n"
 "            "
 msgstr ""
+"\n"
+"Poštovani 3 %(partner_name)s,\n"
+"\n"
+"Despite several reminders, your account is still not settled.\n"
+"\n"
+"Unless full payment is made in next 8 days, then legal action\n"
+"for the recovery of the debt will be taken without further\n"
+"notice.\n"
+"\n"
+"I trust that this action will prove unnecessary and details of\n"
+"due payments is printed below.\n"
+"\n"
+"In case of any queries concerning this matter, do not hesitate\n"
+"to contact our accounting department.\n"
+"\n"
+"Best Regards,\n"
+"            "
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/wizard/followup_print.py:0
+#: code:addons/om_account_followup/wizard/followup_print.py
 #, python-format
 msgid " email(s) sent"
 msgstr " email(s) sent"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/wizard/followup_print.py:0
+#: code:addons/om_account_followup/wizard/followup_print.py
 #, python-format
 msgid " email(s) should have been sent, but "
 msgstr " email(s) should have been sent, but "
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/wizard/followup_print.py:0
+#: code:addons/om_account_followup/wizard/followup_print.py
 #, python-format
 msgid " had unknown email address(es)"
 msgstr " had unknown email address(es)"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/wizard/followup_print.py:0
+#: code:addons/om_account_followup/wizard/followup_print.py
 #, python-format
 msgid " letter(s) in report"
 msgstr " letter(s) in report"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/wizard/followup_print.py:0
+#: code:addons/om_account_followup/wizard/followup_print.py
 #, python-format
 msgid " manual action(s) assigned:"
 msgstr " manual action(s) assigned:"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/wizard/followup_print.py:0
+#: code:addons/om_account_followup/wizard/followup_print.py
 #, python-format
 msgid " will be sent"
 msgstr " će biti poslan"
 
 #. module: om_account_followup
 #: model:mail.template,subject:om_account_followup.email_template_om_account_followup_default
-#: model:mail.template,subject:om_account_followup.email_template_om_account_followup_level0
-#: model:mail.template,subject:om_account_followup.email_template_om_account_followup_level1
-#: model:mail.template,subject:om_account_followup.email_template_om_account_followup_level2
 msgid "${user.company_id.name} Payment Reminder"
 msgstr "${Korisnik.company_id.Naziv} Plaćanje Reminder"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/wizard/followup_print.py:0
+#: code:addons/om_account_followup/wizard/followup_print.py
 #, python-format
 msgid "%s partners have no credits and as such the action is cleared"
 msgstr "%s partners have no credits and as such the action is cleared"
@@ -295,6 +448,8 @@ msgid ""
 "<br/>\n"
 "                                Customer ref:"
 msgstr ""
+"<br/>\n"
+"                                Klijent referenca:"
 
 #. module: om_account_followup
 #: model:mail.template,name:om_account_followup.email_template_om_account_followup_level1
@@ -319,7 +474,9 @@ msgstr "Akcija za uraditi"
 #. module: om_account_followup
 #: model_terms:ir.ui.view,arch_db:om_account_followup.view_partner_inherit_followup_form
 msgid "Action to be taken e.g. Give a phonecall, Check if it's paid, ..."
-msgstr "Akcija koja se treba poduzeti npr. Nazovite telefonom, Provjerite da li je plaćeno, ..."
+msgstr ""
+"Akcija koja se treba poduzeti npr. Nazovite telefonom, Provjerite da li je "
+"plaćeno, ..."
 
 #. module: om_account_followup
 #: model_terms:ir.ui.view,arch_db:om_account_followup.view_om_account_followup_followup_line_form
@@ -328,34 +485,31 @@ msgstr "Nakon"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/models/partner.py:0
-#: model_terms:ir.ui.view,arch_db:om_account_followup.report_followup
+#: code:addons/om_account_followup/models/partner.py
 #, python-format
 msgid "Amount"
 msgstr "Iznos (KM)"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_res_partner__payment_amount_due
-#: model:ir.model.fields,field_description:om_account_followup.field_res_users__payment_amount_due
 msgid "Amount Due"
 msgstr "Iznos duga"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_res_partner__payment_amount_overdue
-#: model:ir.model.fields,field_description:om_account_followup.field_res_users__payment_amount_overdue
 msgid "Amount Overdue"
 msgstr "Iznos duga u kašnjenju"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/models/partner.py:0
+#: code:addons/om_account_followup/models/partner.py
 #, python-format
 msgid "Amount due"
 msgstr "Iznos dug"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/wizard/followup_print.py:0
+#: code:addons/om_account_followup/wizard/followup_print.py
 #, python-format
 msgid "Anybody"
 msgstr "Bilo ko"
@@ -367,7 +521,6 @@ msgstr "Assign a Responsible"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_stat__balance
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_stat_by_partner__balance
 msgid "Balance"
 msgstr "Saldo"
 
@@ -389,6 +542,10 @@ msgid ""
 "                            order to exclude it from the next follow-up\n"
 "                            actions."
 msgstr ""
+"Below is the history of the transactions of this\n"
+"                            customer. You can check \"No Follow-up\" in\n"
+"                            order to exclude it from the next follow-up\n"
+"                            actions."
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_stat__blocked
@@ -405,6 +562,7 @@ msgstr "Otkaži"
 msgid ""
 "Check if you want to print follow-ups without changing follow-up level."
 msgstr ""
+"Check if you want to print follow-ups without changing follow-up level."
 
 #. module: om_account_followup
 #: model_terms:ir.actions.act_window,help:om_account_followup.action_om_account_followup_definition_form
@@ -423,10 +581,6 @@ msgstr "Zatvori"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_followup__company_id
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_print__company_id
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_stat__company_id
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_stat_by_partner__company_id
-#: model_terms:ir.ui.view,arch_db:om_account_followup.view_om_account_followup_stat_search
 msgid "Company"
 msgstr "Preduzeće"
 
@@ -442,17 +596,11 @@ msgstr "Kontakt"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_followup__create_uid
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_line__create_uid
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_print__create_uid
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_sending_results__create_uid
 msgid "Created by"
 msgstr "Kreirao"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_followup__create_date
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_line__create_date
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_print__create_date
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_sending_results__create_date
 msgid "Created on"
 msgstr "Kreirano"
 
@@ -468,7 +616,6 @@ msgstr "Praćenje kupaca"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_res_partner__payment_note
-#: model:ir.model.fields,field_description:om_account_followup.field_res_users__payment_note
 msgid "Customer Payment Promise"
 msgstr "Kupac Plaćanje Promise"
 
@@ -489,20 +636,13 @@ msgstr "Tekući email podsjetnik za naplatu"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/models/partner.py:0
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_sending_results__description
-#: model_terms:ir.ui.view,arch_db:om_account_followup.report_followup
+#: code:addons/om_account_followup/models/partner.py
 #, python-format
 msgid "Description"
 msgstr "Dokument"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_followup__display_name
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_line__display_name
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_print__display_name
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_sending_results__display_name
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_stat__display_name
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_stat_by_partner__display_name
 msgid "Display Name"
 msgstr "Prikazani naziv"
 
@@ -517,6 +657,8 @@ msgid ""
 "Do not change message text, if you want to send email in partner language, "
 "or configure from company"
 msgstr ""
+"Do not change message text, if you want to send email in partner language, "
+"or configure from company"
 
 #. module: om_account_followup
 #: model_terms:ir.ui.view,arch_db:om_account_followup.report_followup
@@ -525,6 +667,9 @@ msgid ""
 "                                <br/>\n"
 "                                Date:"
 msgstr ""
+"Dokument: Kartica kupca\n"
+"                                <br/>\n"
+"                                Datum:"
 
 #. module: om_account_followup
 #: model_terms:ir.ui.view,arch_db:om_account_followup.view_om_account_followup_sending_results
@@ -538,7 +683,7 @@ msgstr "Dužan"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/models/partner.py:0
+#: code:addons/om_account_followup/models/partner.py
 #, python-format
 msgid "Due Date"
 msgstr "Datum duga"
@@ -565,14 +710,13 @@ msgstr "Email šablon"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/models/partner.py:0
+#: code:addons/om_account_followup/models/partner.py
 #, python-format
 msgid "Email not sent because of email address of partner not filled in"
 msgstr "Email nije poslan pošto email adresa partnera nije popunjena"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_stat__date_move
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_stat_by_partner__date_move
 msgid "First move"
 msgstr "Prvi korak"
 
@@ -583,7 +727,6 @@ msgstr "Pošalji email - prvi podsjetnik za plaćanje"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_line__followup_id
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_stat__followup_id
 msgid "Follow Ups"
 msgstr "Podsjetnici naplate"
 
@@ -604,10 +747,6 @@ msgstr "Praćenje naplate"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_followup__followup_line
-#: model:ir.ui.menu,name:om_account_followup.om_account_followup_main_menu
-#: model_terms:ir.ui.view,arch_db:om_account_followup.customer_followup_search_view
-#: model_terms:ir.ui.view,arch_db:om_account_followup.view_om_account_followup_followup_form
-#: model_terms:ir.ui.view,arch_db:om_account_followup.view_om_account_followup_followup_tree
 msgid "Follow-up"
 msgstr "Praćenje naplate"
 
@@ -618,13 +757,11 @@ msgstr "Kriterij praćenja naplate"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_account_move_line__followup_line_id
-#: model_terms:ir.ui.view,arch_db:om_account_followup.view_om_account_followup_stat_search
 msgid "Follow-up Level"
 msgstr "Nivo praćenja naplate"
 
 #. module: om_account_followup
 #: model:ir.actions.act_window,name:om_account_followup.action_om_account_followup_definition_form
-#: model:ir.ui.menu,name:om_account_followup.om_account_followup_menu
 msgid "Follow-up Levels"
 msgstr "Nivoi praćenja naplate"
 
@@ -635,8 +772,6 @@ msgstr "Podsjetnik Izvještaj"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_res_partner__payment_responsible_id
-#: model:ir.model.fields,field_description:om_account_followup.field_res_users__payment_responsible_id
-#: model_terms:ir.ui.view,arch_db:om_account_followup.customer_followup_search_view
 msgid "Follow-up Responsible"
 msgstr "Odgovoran/na za naplatu"
 
@@ -657,13 +792,12 @@ msgstr "Podsjetnik za plaćanje po partnerima"
 
 #. module: om_account_followup
 #: model_terms:ir.ui.view,arch_db:om_account_followup.view_om_account_followup_followup_line_form
-#: model_terms:ir.ui.view,arch_db:om_account_followup.view_om_account_followup_followup_line_tree
 msgid "Follow-up Steps"
 msgstr "Koraci za praćenje naplate"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/wizard/followup_print.py:0
+#: code:addons/om_account_followup/wizard/followup_print.py
 #, python-format
 msgid "Follow-up letter of "
 msgstr "Pismo napomene za plaćanje "
@@ -675,7 +809,6 @@ msgstr "Stavke praćenja"
 
 #. module: om_account_followup
 #: model:ir.actions.act_window,name:om_account_followup.action_followup_stat
-#: model:ir.ui.menu,name:om_account_followup.menu_action_followup_stat_follow
 msgid "Follow-ups Analysis"
 msgstr "podsjetnici Analysis"
 
@@ -703,13 +836,17 @@ msgid ""
 "                    messages to\n"
 "                    the customer."
 msgstr ""
+"For each step, specify the actions to be taken and delay in\n"
+"                    days. It is\n"
+"                    possible to use print and e-mail templates to send specific\n"
+"                    messages to\n"
+"                    the customer."
 
 #. module: om_account_followup
 #: model:ir.model.fields,help:om_account_followup.field_followup_line__sequence
-#: model:ir.model.fields,help:om_account_followup.field_res_partner__latest_followup_sequence
-#: model:ir.model.fields,help:om_account_followup.field_res_users__latest_followup_sequence
 msgid "Gives the sequence order when displaying a list of follow-up lines."
-msgstr "Gives the sequence Narudžba when displaying a Lista of Podsjetnik lines."
+msgstr ""
+"Gives the sequence Narudžba when displaying a Lista of Podsjetnik lines."
 
 #. module: om_account_followup
 #: model_terms:ir.ui.view,arch_db:om_account_followup.view_om_account_followup_stat_search
@@ -722,14 +859,11 @@ msgid ""
 "He said the problem was temporary and promised to pay 50% before 15th of "
 "May, balance before 1st of July."
 msgstr ""
+"He said the problem was temporary and promised to pay 50% before 15th of "
+"May, balance before 1st of July."
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_followup__id
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_line__id
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_print__id
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_sending_results__id
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_stat__id
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_stat_by_partner__id
 msgid "ID"
 msgstr "ID"
 
@@ -739,6 +873,8 @@ msgid ""
 "If not specified by the latest follow-up level, it will send from the "
 "default email template"
 msgstr ""
+"If not specified by the latest follow-up level, it will send from the "
+"default email template"
 
 #. module: om_account_followup
 #: model_terms:ir.ui.view,arch_db:om_account_followup.view_om_account_followup_stat_search
@@ -752,15 +888,14 @@ msgstr "Adresa za račun"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/models/partner.py:0
-#: model_terms:ir.ui.view,arch_db:om_account_followup.report_followup
+#: code:addons/om_account_followup/models/partner.py
 #, python-format
 msgid "Invoice Date"
 msgstr "Datum fakture"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/wizard/followup_print.py:0
+#: code:addons/om_account_followup/wizard/followup_print.py
 #, python-format
 msgid "Invoices Reminder"
 msgstr "Podsjetnik računa"
@@ -772,39 +907,26 @@ msgstr "Stavka žurnala"
 
 #. module: om_account_followup
 #: model:ir.actions.act_window,name:om_account_followup.account_manual_reconcile_action
-#: model_terms:ir.ui.view,arch_db:om_account_followup.view_move_line_reconcile_tree
 msgid "Journal Items to Reconcile"
 msgstr "Dnevnik Artikli to Reconcile"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_followup____last_update
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_line____last_update
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_print____last_update
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_sending_results____last_update
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_stat____last_update
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_stat_by_partner____last_update
 msgid "Last Modified on"
 msgstr "Zadnje mijenjano"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_followup__write_uid
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_line__write_uid
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_print__write_uid
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_sending_results__write_uid
 msgid "Last Updated by"
 msgstr "Zadnji ažurirao"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_followup__write_date
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_line__write_date
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_print__write_date
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_sending_results__write_date
 msgid "Last Updated on"
 msgstr "Zadnje ažurirano"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_stat__date_move_last
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_stat_by_partner__date_move_last
 msgid "Last move"
 msgstr "Last move"
 
@@ -815,19 +937,16 @@ msgstr "Latest Podsjetnik"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_res_partner__latest_followup_date
-#: model:ir.model.fields,field_description:om_account_followup.field_res_users__latest_followup_date
 msgid "Latest Follow-up Date"
 msgstr "Latest Podsjetnik Datum"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_res_partner__latest_followup_level_id
-#: model:ir.model.fields,field_description:om_account_followup.field_res_users__latest_followup_level_id
 msgid "Latest Follow-up Level"
 msgstr "Latest Podsjetnik Level"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_res_partner__latest_followup_level_id_without_lit
-#: model:ir.model.fields,field_description:om_account_followup.field_res_users__latest_followup_level_id_without_lit
 msgid "Latest Follow-up Level without litigation"
 msgstr "Latest Podsjetnik Level without litigation"
 
@@ -838,7 +957,6 @@ msgstr "Najnoviji mjesec podsjetnika"
 
 #. module: om_account_followup
 #: model:ir.model.fields,help:om_account_followup.field_res_partner__latest_followup_date
-#: model:ir.model.fields,help:om_account_followup.field_res_users__latest_followup_date
 msgid "Latest date that the follow-up level of the partner was changed"
 msgstr "Latest Datum that the Podsjetnik level of the partner was changed"
 
@@ -854,7 +972,7 @@ msgstr "Latest followup"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/models/partner.py:0
+#: code:addons/om_account_followup/models/partner.py
 #, python-format
 msgid "Lit."
 msgstr "Spor"
@@ -866,7 +984,6 @@ msgstr "Spor"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_line__manual_action
-#: model_terms:ir.ui.view,arch_db:om_account_followup.view_om_account_followup_followup_line_form
 msgid "Manual Action"
 msgstr "Manual Action"
 
@@ -887,7 +1004,6 @@ msgstr "Maksimalni nivo praćenja naplate"
 
 #. module: om_account_followup
 #: model:ir.actions.act_window,name:om_account_followup.action_customer_my_followup
-#: model:ir.ui.menu,name:om_account_followup.menu_sale_followup
 msgid "My Follow-Ups"
 msgstr "Moja praćenja naplate"
 
@@ -908,13 +1024,11 @@ msgstr "Treba štampanje"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_res_partner__payment_next_action
-#: model:ir.model.fields,field_description:om_account_followup.field_res_users__payment_next_action
 msgid "Next Action"
 msgstr "Sljedeća akcija"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_res_partner__payment_next_action_date
-#: model:ir.model.fields,field_description:om_account_followup.field_res_users__payment_next_action_date
 msgid "Next Action Date"
 msgstr "Datum sljedeće akcije"
 
@@ -940,23 +1054,22 @@ msgstr "Only one Podsjetnik per Kompanija is allowed"
 
 #. module: om_account_followup
 #: model:ir.model.fields,help:om_account_followup.field_res_partner__payment_responsible_id
-#: model:ir.model.fields,help:om_account_followup.field_res_users__payment_responsible_id
 msgid ""
 "Optionally you can assign a user to this field, which will make him "
 "responsible for the action."
 msgstr ""
+"Optionally you can assign a user to this field, which will make him "
+"responsible for the action."
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/models/partner.py:0
+#: code:addons/om_account_followup/models/partner.py
 #, python-format
 msgid "Overdue email sent to %s, "
 msgstr "Overdue E-mail sent to %s, "
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_stat__partner_id
-#: model:ir.model.fields,field_description:om_account_followup.field_followup_stat_by_partner__partner_id
-#: model_terms:ir.ui.view,arch_db:om_account_followup.view_om_account_followup_stat_search
 msgid "Partner"
 msgstr "Partner"
 
@@ -967,7 +1080,6 @@ msgstr "partner Stavke"
 
 #. module: om_account_followup
 #: model_terms:ir.ui.view,arch_db:om_account_followup.om_account_followup_stat_by_partner_search
-#: model_terms:ir.ui.view,arch_db:om_account_followup.om_account_followup_stat_by_partner_tree
 msgid "Partner to Remind"
 msgstr "partner to Remind"
 
@@ -988,7 +1100,6 @@ msgstr "Praćenje naplate"
 
 #. module: om_account_followup
 #: model:ir.model.fields,help:om_account_followup.field_res_partner__payment_note
-#: model:ir.model.fields,help:om_account_followup.field_res_users__payment_note
 msgid "Payment Note"
 msgstr "Bilješka o plaćanju"
 
@@ -1005,7 +1116,7 @@ msgstr "Štampa dugovanja kupca zbog kašnjenja"
 #. module: om_account_followup
 #: model_terms:ir.ui.view,arch_db:om_account_followup.view_partner_inherit_followup_form
 msgid "Print overdue payments report independent of follow-up line"
-msgstr "Štampa zaostalih dugovanja kupca neovisno o praćenju naplate"
+msgstr "Štampa zaostalih dugovanja kupca neovisno o praćenju naplate "
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_line__description
@@ -1014,8 +1125,7 @@ msgstr "Štampana poruka"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/models/partner.py:0
-#: code:addons/om_account_followup/models/partner.py:0
+#: code:addons/om_account_followup/models/partner.py
 #, python-format
 msgid "Printed overdue payments report"
 msgstr "Printed overdue Plaćanja Izvještaj"
@@ -1027,7 +1137,7 @@ msgstr "Opis"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/models/partner.py:0
+#: code:addons/om_account_followup/models/partner.py
 #, python-format
 msgid "Reference"
 msgstr "Referenca"
@@ -1074,7 +1184,7 @@ msgstr "Pošalji Letters and Emails"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/wizard/followup_print.py:0
+#: code:addons/om_account_followup/wizard/followup_print.py
 #, python-format
 msgid "Send Letters and Emails: Actions Summary"
 msgstr "Pošalji Letters and Emails: Actions Summary"
@@ -1096,7 +1206,6 @@ msgstr "Pošalji pismo ili email"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_line__send_email
-#: model_terms:ir.ui.view,arch_db:om_account_followup.view_om_account_followup_followup_line_form
 msgid "Send an Email"
 msgstr "Pošalji email"
 
@@ -1112,8 +1221,6 @@ msgstr "Pošalji podsjetnike"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_line__sequence
-#: model:ir.model.fields,field_description:om_account_followup.field_res_partner__latest_followup_sequence
-#: model:ir.model.fields,field_description:om_account_followup.field_res_users__latest_followup_sequence
 msgid "Sequence"
 msgstr "Sekvenca"
 
@@ -1139,26 +1246,28 @@ msgstr "!"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/report/followup_print.py:0
+#: code:addons/om_account_followup/report/followup_print.py
 #, python-format
 msgid ""
 "The followup plan defined for the current company does not have any followup"
 " action."
 msgstr ""
+"The followup plan defined for the current Kompanija does not have any "
+"followup action."
 
 #. module: om_account_followup
 #: model:ir.model.fields,help:om_account_followup.field_res_partner__latest_followup_level_id
-#: model:ir.model.fields,help:om_account_followup.field_res_users__latest_followup_level_id
 msgid "The maximum follow-up level"
 msgstr "The maximum Podsjetnik level"
 
 #. module: om_account_followup
 #: model:ir.model.fields,help:om_account_followup.field_res_partner__latest_followup_level_id_without_lit
-#: model:ir.model.fields,help:om_account_followup.field_res_users__latest_followup_level_id_without_lit
 msgid ""
 "The maximum follow-up level without taking into account the account move "
 "lines with litigation"
 msgstr ""
+"The maximum Podsjetnik level without taking into Konto the Konto move lines "
+"with litigation"
 
 #. module: om_account_followup
 #: model:ir.model.fields,help:om_account_followup.field_followup_line__delay
@@ -1167,19 +1276,24 @@ msgid ""
 "the reminder. Could be negative if you want to send a polite alert "
 "beforehand."
 msgstr ""
+"The Broj of Dani after the due Datum of the Račun to wait before sending the"
+" reminder. Could be negative if you want to Pošalji a polite alert "
+"beforehand."
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/models/partner.py:0
+#: code:addons/om_account_followup/models/partner.py
 #, python-format
 msgid ""
 "The partner does not have any accounting entries to print in the overdue "
 "report for the current company."
 msgstr ""
+"The partner does not have any Računovodstvo Stavke to Štampaj in the overdue"
+" Izvještaj for the current Kompanija."
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/models/partner.py:0
+#: code:addons/om_account_followup/models/partner.py
 #, python-format
 msgid "There is no followup plan defined for the current company."
 msgstr "There is no followup plan defined for the current Kompanija."
@@ -1192,29 +1306,38 @@ msgid ""
 "                        set the manual actions per customer, according to the\n"
 "                        follow-up levels defined."
 msgstr ""
+"Ova radnja će poslati podsjetnike e-poštom, odštampati\n"
+"                        pisma i\n"
+"                        postaviti ručne akcije po kupcu, u skladu sa\n"
+"                        definisanim nivoima praćenja."
 
 #. module: om_account_followup
 #: model:ir.model.fields,help:om_account_followup.field_followup_print__date
 msgid "This field allow you to select a forecast date to plan your follow-ups"
-msgstr "This field allow you to select a forecast Datum to plan your podsjetnici"
+msgstr ""
+"This field allow you to select a forecast Datum to plan your podsjetnici"
 
 #. module: om_account_followup
 #: model:ir.model.fields,help:om_account_followup.field_res_partner__payment_next_action
-#: model:ir.model.fields,help:om_account_followup.field_res_users__payment_next_action
 msgid ""
 "This is the next action to be taken.  It will automatically be set when the "
 "partner gets a follow-up level that requires a manual action. "
 msgstr ""
+"Ovo je sljedeća akcija koju treba preduzeti. Automatski se postavlja kada "
+"partner dobije nivo praćenja koji zahtijeva ručnu akciju."
 
 #. module: om_account_followup
 #: model:ir.model.fields,help:om_account_followup.field_res_partner__payment_next_action_date
-#: model:ir.model.fields,help:om_account_followup.field_res_users__payment_next_action_date
 msgid ""
 "This is when the manual follow-up is needed. The date will be set to the "
 "current date when the partner gets a follow-up level that requires a manual "
 "action. Can be practical to set manually e.g. to see if he keeps his "
 "promises."
 msgstr ""
+"Ovdje se bilježi kada je potrebna ručna naplata. Datum će biti postavljen na"
+" trenutni kada partner dobije nivo praćenja koji zahtijeva ručnu akciju. "
+"Može biti korisno postaviti ga ručno, npr. da provjerite da li partner "
+"ispunjava obećanja."
 
 #. module: om_account_followup
 #: model_terms:ir.ui.view,arch_db:om_account_followup.view_om_account_followup_followup_form
@@ -1229,16 +1352,22 @@ msgid ""
 "                        same customer, the actions of the most\n"
 "                        overdue invoice will be executed."
 msgstr ""
+"Da biste podsjetili kupce da plate svoje fakture, možete\n"
+"                        definisati različite akcije u zavisnosti od toga koliko je\n"
+"                        kupac u zakašnjenju. Ove akcije su objedinjene\n"
+"                        u nivoe praćenja koji se pokreću kada rok\n"
+"                        fakture prođe određeni\n"
+"                        broj dana. Ako postoje druge dospjele fakture za\n"
+"                        istog kupca, izvršiće se akcije najdospjelije\n"
+"                        fakture."
 
 #. module: om_account_followup
 #: model_terms:ir.ui.view,arch_db:om_account_followup.account_move_line_partner_tree
-#: model_terms:ir.ui.view,arch_db:om_account_followup.view_move_line_reconcile_tree
 msgid "Total credit"
 msgstr "Ukupno potražuje"
 
 #. module: om_account_followup
 #: model_terms:ir.ui.view,arch_db:om_account_followup.account_move_line_partner_tree
-#: model_terms:ir.ui.view,arch_db:om_account_followup.view_move_line_reconcile_tree
 msgid "Total debit"
 msgstr "Ukupno duguje"
 
@@ -1249,7 +1378,6 @@ msgstr "Ukupno:"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_res_partner__unreconciled_aml_ids
-#: model:ir.model.fields,field_description:om_account_followup.field_res_users__unreconciled_aml_ids
 msgid "Unreconciled Aml"
 msgstr "Unreconciled Aml"
 
@@ -1273,11 +1401,10 @@ msgstr "When processing, it will Pošalji an E-mail"
 msgid ""
 "When processing, it will set the manual action to be taken for that "
 "customer. "
-msgstr ""
+msgstr "Kada se obradi, tražiće ručnu akciju da se poduzme za tog klijenta. "
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_res_partner__payment_earliest_due_date
-#: model:ir.model.fields,field_description:om_account_followup.field_res_users__payment_earliest_due_date
 msgid "Worst Due Date"
 msgstr "Najstariji datum kašnjenja"
 
@@ -1290,23 +1417,31 @@ msgid ""
 "                            forget to translate in all languages you installed\n"
 "                            using to top right icon."
 msgstr ""
+"Naipišite ovdje uvodni dio pisma,\n"
+"                            u skladu sa nivoom naplate. Možete\n"
+"                            koristiti sljedeće ključne riječi u tekstu. Nemojte zaboraviti\n"
+"                            da prevedete u svim jezicima koji su instalirali\n"
+"                            koristeći odgovarajuće dugme jezika s desna."
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/models/partner.py:0
+#: code:addons/om_account_followup/models/partner.py
 #, python-format
 msgid ""
 "You became responsible to do the next action for the payment follow-up of"
 msgstr ""
+"You became responsible to do the next action for the Plaćanje Podsjetnik of"
 
 #. module: om_account_followup
 #. odoo-python
-#: code:addons/om_account_followup/models/followup.py:0
+#: code:addons/om_account_followup/models/followup.py
 #, python-format
 msgid ""
 "Your description is invalid, use the right legend or %% if you want to use "
 "the percent character."
 msgstr ""
+"Your Opis is invalid, use the right legend or %% if you want to use the "
+"percent character."
 
 #. module: om_account_followup
 #: model_terms:ir.ui.view,arch_db:om_account_followup.view_om_account_followup_followup_line_form
