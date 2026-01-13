@@ -68,7 +68,7 @@ msgstr "Predlošci kontnog plana"
 #. module: om_account_accountant
 #: model:ir.model,name:om_account_accountant.model_res_config_settings
 msgid "Config Settings"
-msgstr "Postavke konfiguracije"
+msgstr "Postavke"
 
 #. module: om_account_accountant
 #: model_terms:ir.ui.view,arch_db:om_account_accountant.view_account_chart_template_form
@@ -88,7 +88,7 @@ msgstr "Predlošci fiskalnih pozicija"
 #. module: om_account_accountant
 #: model_terms:ir.ui.view,arch_db:om_account_accountant.view_account_chart_template_seacrh
 msgid "Group By"
-msgstr "Grupiši po..."
+msgstr "Grupiši po"
 
 #. module: om_account_accountant
 #: model_terms:ir.ui.view,arch_db:om_account_accountant.view_account_chart_template_seacrh

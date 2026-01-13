@@ -582,12 +582,12 @@ msgstr "Zatvori"
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_followup__company_id
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: om_account_followup
 #: model:ir.model,name:om_account_followup.model_res_config_settings
 msgid "Config Settings"
-msgstr "Postavke konfiguracije"
+msgstr "Postavke"
 
 #. module: om_account_followup
 #: model:ir.model,name:om_account_followup.model_res_partner
@@ -639,7 +639,7 @@ msgstr "Tekući email podsjetnik za naplatu"
 #: code:addons/om_account_followup/models/partner.py
 #, python-format
 msgid "Description"
-msgstr "Opis"
+msgstr "Dokument"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_followup__display_name
@@ -851,7 +851,7 @@ msgstr ""
 #. module: om_account_followup
 #: model_terms:ir.ui.view,arch_db:om_account_followup.view_om_account_followup_stat_search
 msgid "Group By"
-msgstr "Grupiši po..."
+msgstr "Grupiši po"
 
 #. module: om_account_followup
 #: model_terms:ir.ui.view,arch_db:om_account_followup.view_partner_inherit_followup_form
@@ -913,17 +913,17 @@ msgstr "Dnevnik Artikli to Reconcile"
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_followup____last_update
 msgid "Last Modified on"
-msgstr "Zadnja izmjena na"
+msgstr "Zadnje mijenjano"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_followup__write_uid
 msgid "Last Updated by"
-msgstr "Zadnje ažuriranje izvršio"
+msgstr "Zadnji ažurirao"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_followup__write_date
 msgid "Last Updated on"
-msgstr "Zadnje ažuriranje na"
+msgstr "Zadnje ažurirano"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_stat__date_move_last
