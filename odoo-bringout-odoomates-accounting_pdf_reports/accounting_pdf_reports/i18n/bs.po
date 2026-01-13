@@ -88,7 +88,7 @@ msgstr "<strong>Duljina perioda (dani)</strong>"
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
 msgid "<strong>Purchase</strong>"
-msgstr "<strong>Nabava</strong>"
+msgstr "<strong>Nabavka</strong>"
 
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_general_ledger
