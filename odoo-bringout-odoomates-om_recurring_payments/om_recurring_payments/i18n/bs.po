@@ -37,7 +37,7 @@ msgstr "Cannot Obriši Završeno records !"
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__company_id
 msgid "Company"
-msgstr "Preduzeće"
+msgstr "Kompanija"
 
 #. module: om_recurring_payments
 #: model_terms:ir.ui.view,arch_db:om_recurring_payments.view_recurring_template_form
@@ -92,7 +92,7 @@ msgstr "Prikazani naziv"
 #. module: om_recurring_payments
 #: model:ir.model.fields.selection,name:om_recurring_payments.selection__account_recurring_template__state__done
 msgid "Done"
-msgstr "Gotovo"
+msgstr "Dovršeno"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields.selection,name:om_recurring_payments.selection__account_recurring_template__state__draft
@@ -127,17 +127,17 @@ msgstr "Vrsta naloga"
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template____last_update
 msgid "Last Modified on"
-msgstr "Zadnje mijenjano"
+msgstr "Zadnja izmjena na"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__write_uid
 msgid "Last Updated by"
-msgstr "Zadnji ažurirao"
+msgstr "Zadnje ažuriranje izvršio"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__write_date
 msgid "Last Updated on"
-msgstr "Zadnje ažurirano"
+msgstr "Zadnje ažuriranje na"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields.selection,name:om_recurring_payments.selection__account_recurring_template__recurring_period__months
@@ -239,7 +239,7 @@ msgstr "Stavi u pripremu"
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_recurring_payment__date_begin
 msgid "Start Date"
-msgstr "Početni datum"
+msgstr "Datum početka"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__state

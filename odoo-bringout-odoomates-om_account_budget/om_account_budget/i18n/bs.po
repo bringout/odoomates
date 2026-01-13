@@ -55,7 +55,7 @@ msgstr "Achievement"
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__message_needaction
 msgid "Action Needed"
-msgstr "Potrebna akcija"
+msgstr "Potrebna radnja"
 
 #. module: om_account_budget
 #: model:ir.model.fields,help:om_account_budget.field_crossovered_budget_lines__practical_amount
@@ -154,7 +154,7 @@ msgstr "Otkaži Budžet"
 #. module: om_account_budget
 #: model:ir.model.fields.selection,name:om_account_budget.selection__crossovered_budget__state__cancel
 msgid "Cancelled"
-msgstr "Otkazan"
+msgstr "Otkazano"
 
 #. module: om_account_budget
 #: model_terms:ir.actions.act_window,help:om_account_budget.act_crossovered_budget_view
@@ -164,7 +164,7 @@ msgstr "Click to create a new budget."
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post__company_id
 msgid "Company"
-msgstr "Preduzeće"
+msgstr "Kompanija"
 
 #. module: om_account_budget
 #: model:ir.model.fields,help:om_account_budget.field_crossovered_budget_lines__percentage
@@ -208,7 +208,7 @@ msgstr "Prikazani naziv"
 #. module: om_account_budget
 #: model:ir.model.fields.selection,name:om_account_budget.selection__crossovered_budget__state__done
 msgid "Done"
-msgstr "Gotovo"
+msgstr "Dovršeno"
 
 #. module: om_account_budget
 #: model:ir.model.fields.selection,name:om_account_budget.selection__crossovered_budget__state__draft
@@ -233,17 +233,17 @@ msgstr "Entries..."
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__message_follower_ids
 msgid "Followers"
-msgstr "Pratioci"
+msgstr "Pratitelji"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__message_partner_ids
 msgid "Followers (Partners)"
-msgstr "Pratioci (Partneri)"
+msgstr "Pratitelji (partneri)"
 
 #. module: om_account_budget
 #: model_terms:ir.ui.view,arch_db:om_account_budget.view_crossovered_budget_line_search
 msgid "Group By"
-msgstr "Grupiši po"
+msgstr "Grupiši po..."
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__has_message
@@ -278,17 +278,17 @@ msgstr "Pratilac"
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post____last_update
 msgid "Last Modified on"
-msgstr "Zadnje mijenjano"
+msgstr "Zadnja izmjena na"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post__write_uid
 msgid "Last Updated by"
-msgstr "Zadnji ažurirao"
+msgstr "Zadnje ažuriranje izvršio"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post__write_date
 msgid "Last Updated on"
-msgstr "Zadnje ažurirano"
+msgstr "Zadnje ažuriranje na"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__message_main_attachment_id
@@ -303,7 +303,7 @@ msgstr "Greška pri isporuci poruke"
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__message_ids
 msgid "Messages"
-msgstr "Poruke"
+msgstr "Nepročitane poruke"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post__name
@@ -378,7 +378,7 @@ msgstr "Odgovoran"
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__date_from
 msgid "Start Date"
-msgstr "Početni datum"
+msgstr "Datum početka"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__state
@@ -410,7 +410,7 @@ msgstr "Theoritical amount"
 #. module: om_account_budget
 #: model_terms:ir.ui.view,arch_db:om_account_budget.view_crossovered_budget_search
 msgid "To Approve"
-msgstr "Za odobriti"
+msgstr "Odobriti"
 
 #. module: om_account_budget
 #: model_terms:ir.ui.view,arch_db:om_account_budget.view_crossovered_budget_search
@@ -432,7 +432,7 @@ msgstr "Odobreno"
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__website_message_ids
 msgid "Website Messages"
-msgstr "Poruke sa website-a"
+msgstr "Nepročitane poruke"
 
 #. module: om_account_budget
 #: model:ir.model.fields,help:om_account_budget.field_crossovered_budget__website_message_ids
