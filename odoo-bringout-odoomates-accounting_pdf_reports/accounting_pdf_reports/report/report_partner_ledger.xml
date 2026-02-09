@@ -8,6 +8,13 @@
                 <t t-set="data_report_header_spacing" t-value="9"/>
                 <t t-set="data_report_dpi" t-value="110"/>
                 <div class="page">
+                    <style>
+                        .col-amount {
+                            width: 120px;
+                            min-width: 120px;
+                            text-align: right;
+                        }
+                    </style>
                     <h2>Partner Ledger</h2>
                     <div class="row">
                         <div class="col-3">
@@ -32,6 +39,7 @@
                         </div>
                     </div>
 
+                    <t t-set="currency_symbol" t-value="res_company.currency_id.symbol"/>
                     <table class="table table-sm table-reports">
                         <thead>
                             <tr>
@@ -39,10 +47,10 @@
                                 <th>JRNL</th>
                                 <th>Account</th>
                                 <th>Ref</th>
-                                <th>Debit</th>
-                                <th>Credit</th>
-                                <th>Balance</th>
-                                <th t-if="data['form']['amount_currency']">Currency</th>
+                                <th class="col-amount">Debit (<t t-esc="currency_symbol"/>)</th>
+                                <th class="col-amount">Credit (<t t-esc="currency_symbol"/>)</th>
+                                <th class="col-amount">Balance (<t t-esc="currency_symbol"/>)</th>
+                                <th class="col-amount" t-if="data['form']['amount_currency']">Currency</th>
                             </tr>
                         </thead>
                         <t t-foreach="docs" t-as="o">
@@ -53,17 +61,17 @@
                                         -
                                         <strong t-esc="o.name"/>
                                     </td>
-                                    <td class="text-end">
+                                    <td class="col-amount">
                                         <strong t-esc="sum_partner(data, o, 'debit')"
-                                                t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                                t-options="{'widget': 'float', 'precision': 2}"/>
                                     </td>
-                                    <td class="text-end">
+                                    <td class="col-amount">
                                         <strong t-esc="sum_partner(data, o, 'credit')"
-                                                t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                                t-options="{'widget': 'float', 'precision': 2}"/>
                                     </td>
-                                    <td class="text-end">
+                                    <td class="col-amount">
                                         <strong t-esc="sum_partner(data, o, 'debit - credit')"
-                                                t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                                t-options="{'widget': 'float', 'precision': 2}"/>
                                     </td>
                                 </tr>
                                 <tr t-foreach="lines(data, o)" t-as="line">
@@ -79,22 +87,22 @@
                                     <td>
                                         <span t-esc="line['displayed_name']"/>
                                     </td>
-                                    <td class="text-end">
+                                    <td class="col-amount">
                                         <span t-esc="line['debit']"
-                                              t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                              t-options="{'widget': 'float', 'precision': 2}"/>
                                     </td>
-                                    <td class="text-end">
+                                    <td class="col-amount">
                                         <span t-esc="line['credit']"
-                                              t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                              t-options="{'widget': 'float', 'precision': 2}"/>
                                     </td>
-                                    <td class="text-end">
+                                    <td class="col-amount">
                                         <span t-esc="line['progress']"
-                                              t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                              t-options="{'widget': 'float', 'precision': 2}"/>
                                     </td>
-                                    <td class="text-end" t-if="data['form']['amount_currency']">
+                                    <td class="col-amount" t-if="data['form']['amount_currency']">
                                         <t t-if="line['currency_id']">
                                             <span t-esc="line['amount_currency']"
-                                                  t-options="{'widget': 'monetary', 'display_currency': line['currency_id']}"/>
+                                                  t-options="{'widget': 'float', 'precision': 2}"/>
                                         </t>
                                     </td>
                                 </tr>
