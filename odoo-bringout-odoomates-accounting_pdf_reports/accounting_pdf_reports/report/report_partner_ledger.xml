@@ -15,27 +15,27 @@
                             text-align: right;
                         }
                     </style>
-                    <h2>Partner Ledger</h2>
+                    <h2>Kartica partnera</h2>
                     <div class="row">
                         <div class="col-3">
-                            <strong>Company:</strong>
+                            <strong>Tvrtka:</strong>
                             <p t-esc="res_company.name"/>
                         </div>
                         <div class="col-3">
                             <t t-if="data['form']['date_from']">
-                                <strong>Date from :</strong>
+                                <strong>Datum od:</strong>
                                 <span t-esc="data['form']['date_from']" t-options="{'widget': 'date'}"/>
                                 <br/>
                             </t>
                             <t t-if="data['form']['date_to']">
-                                <strong>Date to :</strong>
+                                <strong>Datum do:</strong>
                                 <span t-esc="data['form']['date_to']" t-options="{'widget': 'date'}"/>
                             </t>
                         </div>
                         <div class="col-3">
-                            <strong>Target Moves:</strong>
-                            <p t-if="data['form']['target_move'] == 'all'">All Entries</p>
-                            <p t-if="data['form']['target_move'] == 'posted'">All Posted Entries</p>
+                            <strong>Transakcije:</strong>
+                            <p t-if="data['form']['target_move'] == 'all'">Sve proknjižene stavke</p>
+                            <p t-if="data['form']['target_move'] == 'posted'">Samo proknjižene stavke</p>
                         </div>
                     </div>
 
@@ -43,14 +43,14 @@
                     <table class="table table-sm table-reports">
                         <thead>
                             <tr>
-                                <th>Date</th>
-                                <th>JRNL</th>
-                                <th>Account</th>
-                                <th>Ref</th>
-                                <th class="col-amount">Debit (<t t-esc="currency_symbol"/>)</th>
-                                <th class="col-amount">Credit (<t t-esc="currency_symbol"/>)</th>
-                                <th class="col-amount">Balance (<t t-esc="currency_symbol"/>)</th>
-                                <th class="col-amount" t-if="data['form']['amount_currency']">Currency</th>
+                                <th>Datum</th>
+                                <th>ŽURN</th>
+                                <th>Naziv konta</th>
+                                <th>Opis</th>
+                                <th class="col-amount">Duguje (<t t-esc="currency_symbol"/>)</th>
+                                <th class="col-amount">Potražuje (<t t-esc="currency_symbol"/>)</th>
+                                <th class="col-amount">Saldo (<t t-esc="currency_symbol"/>)</th>
+                                <th class="col-amount" t-if="data['form']['amount_currency']">Valuta</th>
                             </tr>
                         </thead>
                         <t t-foreach="docs" t-as="o">

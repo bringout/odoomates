@@ -22,5 +22,10 @@ class AccountPartnerLedger(models.TransientModel):
 
     def _print_report(self, data):
         data = self._get_report_data(data)
-        return self.env.ref('accounting_pdf_reports.action_report_partnerledger').with_context(landscape=True).\
-            report_action(self, data=data)
+        if self.partner_ids:
+            report_filename = _('Kartica partnera') + ' ' + ', '.join(self.partner_ids.mapped('name'))
+        else:
+            report_filename = _('Kartica partnera')
+        return self.env.ref(
+            'accounting_pdf_reports.action_report_partnerledger'
+        ).with_context(landscape=True, report_filename=report_filename).report_action(self, data=data)
