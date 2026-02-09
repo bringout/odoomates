@@ -14,6 +14,11 @@ class AccountPartnerLedger(models.TransientModel):
                                           "the company currency.")
     reconciled = fields.Boolean('Reconciled Entries')
 
+    def _get_report_base_filename(self):
+        if self.partner_ids:
+            return _('Kartica partnera') + ' ' + ', '.join(self.partner_ids.mapped('name'))
+        return _('Kartica partnera')
+
     def _get_report_data(self, data):
         data = self.pre_print_report(data)
         data['form'].update({'reconciled': self.reconciled,
@@ -22,10 +27,7 @@ class AccountPartnerLedger(models.TransientModel):
 
     def _print_report(self, data):
         data = self._get_report_data(data)
-        if self.partner_ids:
-            report_filename = _('Kartica partnera') + ' ' + ', '.join(self.partner_ids.mapped('name'))
-        else:
-            report_filename = _('Kartica partnera')
+        report_filename = self._get_report_base_filename()
         return self.env.ref(
             'accounting_pdf_reports.action_report_partnerledger'
         ).with_context(landscape=True, report_filename=report_filename).report_action(self, data=data)
