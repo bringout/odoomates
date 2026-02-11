@@ -4,74 +4,77 @@
     <template id="report_partnerledger">
         <t t-call="web.html_container">
             <t t-call="web.internal_layout">
-                <t t-set="data_report_margin_top" t-value="12"/>
-                <t t-set="data_report_header_spacing" t-value="9"/>
-                <t t-set="data_report_dpi" t-value="110"/>
-                <div class="page">
-                    <style>
-                        .col-amount {
-                            width: 120px;
-                            min-width: 120px;
-                            text-align: right;
-                        }
-                    </style>
-                    <h2>Kartica partnera</h2>
-                    <div class="row">
-                        <div class="col-3">
-                            <strong>Tvrtka:</strong>
-                            <p t-esc="res_company.name"/>
+                <style>
+                    .col-amount {
+                        width: 120px;
+                        min-width: 120px;
+                        text-align: right;
+                    }
+                </style>
+                <t t-set="currency_symbol" t-value="res_company.currency_id.symbol"/>
+                <t t-foreach="docs" t-as="o">
+                    <div class="page" t-att-style="'page-break-before: always;' if not o_first else ''">
+                        <h5 style="margin-top: 4px;"><strong>Kartica partnera: <t t-esc="o.name"/></strong></h5>
+                        <div class="row">
+                            <div class="col-3">
+                                <strong>Preduzeće:</strong>
+                                <p t-esc="res_company.name"/>
+                            </div>
+                            <div class="col-3">
+                                <strong>Partner:</strong>
+                                <p>
+                                    <t t-if="o.ref"><t t-esc="o.ref"/> - </t>
+                                    <t t-esc="o.name"/>
+                                </p>
+                            </div>
+                            <div class="col-3">
+                                <t t-if="data['form']['date_from']">
+                                    <strong>Datum od:</strong>
+                                    <span t-esc="data['form']['date_from']" t-options="{'widget': 'date'}"/>
+                                    <br/>
+                                </t>
+                                <t t-if="data['form']['date_to']">
+                                    <strong>Datum do:</strong>
+                                    <span t-esc="data['form']['date_to']" t-options="{'widget': 'date'}"/>
+                                </t>
+                            </div>
+                            <div class="col-3">
+                                <strong>Transakcije:</strong>
+                                <p t-if="data['form']['target_move'] == 'all'">Sve proknjižene stavke</p>
+                                <p t-if="data['form']['target_move'] == 'posted'">Samo proknjižene stavke</p>
+                            </div>
                         </div>
-                        <div class="col-3">
-                            <t t-if="data['form']['date_from']">
-                                <strong>Datum od:</strong>
-                                <span t-esc="data['form']['date_from']" t-options="{'widget': 'date'}"/>
-                                <br/>
-                            </t>
-                            <t t-if="data['form']['date_to']">
-                                <strong>Datum do:</strong>
-                                <span t-esc="data['form']['date_to']" t-options="{'widget': 'date'}"/>
-                            </t>
-                        </div>
-                        <div class="col-3">
-                            <strong>Transakcije:</strong>
-                            <p t-if="data['form']['target_move'] == 'all'">Sve proknjižene stavke</p>
-                            <p t-if="data['form']['target_move'] == 'posted'">Samo proknjižene stavke</p>
-                        </div>
-                    </div>
 
-                    <t t-set="currency_symbol" t-value="res_company.currency_id.symbol"/>
-                    <table class="table table-sm table-reports">
-                        <thead>
-                            <tr>
-                                <th>Datum</th>
-                                <th>ŽURN</th>
-                                <th>Naziv konta</th>
-                                <th>Opis</th>
-                                <th class="col-amount">Duguje (<t t-esc="currency_symbol"/>)</th>
-                                <th class="col-amount">Potražuje (<t t-esc="currency_symbol"/>)</th>
-                                <th class="col-amount">Saldo (<t t-esc="currency_symbol"/>)</th>
-                                <th class="col-amount" t-if="data['form']['amount_currency']">Valuta</th>
-                            </tr>
-                        </thead>
-                        <t t-foreach="docs" t-as="o">
-                            <tbody>
+                        <table class="table table-sm table-reports" style="margin-top: 2px;">
+                            <thead>
                                 <tr>
+                                    <th>Datum</th>
+                                    <th>ŽURN</th>
+                                    <th>Naziv konta</th>
+                                    <th>Opis</th>
+                                    <th class="col-amount">Duguje (<t t-esc="currency_symbol"/>)</th>
+                                    <th class="col-amount">Potražuje (<t t-esc="currency_symbol"/>)</th>
+                                    <th class="col-amount">Saldo (<t t-esc="currency_symbol"/>)</th>
+                                    <th class="col-amount" t-if="data['form']['amount_currency']">Valuta</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="font-weight-bold" style="background-color: #fff9e6;">
                                     <td colspan="4">
-                                        <strong t-esc="o.ref"/>
-                                        -
-                                        <strong t-esc="o.name"/>
+                                        <t t-if="o.ref"><t t-esc="o.ref"/> - </t>
+                                        <t t-esc="o.name"/>
                                     </td>
                                     <td class="col-amount">
-                                        <strong t-esc="sum_partner(data, o, 'debit')"
-                                                t-options="{'widget': 'float', 'precision': 2}"/>
+                                        <t t-esc="sum_partner(data, o, 'debit')"
+                                           t-options="{'widget': 'float', 'precision': 2}"/>
                                     </td>
                                     <td class="col-amount">
-                                        <strong t-esc="sum_partner(data, o, 'credit')"
-                                                t-options="{'widget': 'float', 'precision': 2}"/>
+                                        <t t-esc="sum_partner(data, o, 'credit')"
+                                           t-options="{'widget': 'float', 'precision': 2}"/>
                                     </td>
                                     <td class="col-amount">
-                                        <strong t-esc="sum_partner(data, o, 'debit - credit')"
-                                                t-options="{'widget': 'float', 'precision': 2}"/>
+                                        <t t-esc="sum_partner(data, o, 'debit - credit')"
+                                           t-options="{'widget': 'float', 'precision': 2}"/>
                                     </td>
                                 </tr>
                                 <tr t-foreach="lines(data, o)" t-as="line">
@@ -107,9 +110,9 @@
                                     </td>
                                 </tr>
                             </tbody>
-                        </t>
-                    </table>
-                </div>
+                        </table>
+                    </div>
+                </t>
             </t>
         </t>
     </template>
