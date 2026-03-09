@@ -13,8 +13,7 @@ class AccountBudgetPost(models.Model):
     _description = "Budgetary Position"
 
     name = fields.Char('Name', required=True)
-    account_ids = fields.Many2many('account.account', 'account_budget_rel', 'budget_id', 'account_id', 'Accounts',
-        domain=[('deprecated', '=', False)])
+    account_ids = fields.Many2many('account.account', 'account_budget_rel', 'budget_id', 'account_id', 'Accounts')
     company_id = fields.Many2one('res.company', 'Company', required=True, default=lambda self: self.env.company)
 
     def _check_account_ids(self, vals):
