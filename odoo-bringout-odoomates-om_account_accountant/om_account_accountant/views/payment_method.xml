@@ -40,9 +40,8 @@
             <search string="Payment Methods">
                 <field name="name" string="Payment Method"/>
                 <field name="payment_type"/>
-                <group expand="0" string="Group By">
-                    <filter name="payment_type" string="Payment Type" context="{'group_by':'payment_type'}"/>
-                </group>
+                <separator/>
+                <filter name="payment_type" string="Payment Type" context="{'group_by':'payment_type'}"/>
             </search>
         </field>
     </record>
