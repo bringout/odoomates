@@ -33,7 +33,7 @@
 
     <menuitem id="menu_budget_post_form"
               action="open_budget_post_form"
-              parent="account.account_management_menu"
+              parent="account.account_account_menu"
               sequence="5"/>
 
     <record id="view_budget_post_form" model="ir.ui.view">
@@ -247,7 +247,7 @@
     </record>
 
     <menuitem id="menu_act_crossovered_budget_view"
-              parent="account.menu_finance_entries_management"
+              parent="account.menu_finance_entries"
               name="Budgets"
               action="act_crossovered_budget_view"
               sequence="60"
@@ -262,10 +262,9 @@
                 <field name="crossovered_budget_id"/>
                 <filter name="filter_not_cancelled" string="Not Cancelled"
                         domain="[('crossovered_budget_state','!=','cancel')]"/>
-                <group expand="0" string="Group By">
-                    <filter name="group_crossevered_budgdet_id" string="Budgets"
-                            domain="[]" context="{'group_by':'crossovered_budget_id'}"/>
-                </group>
+                <separator/>
+                <filter name="group_crossevered_budgdet_id" string="Budgets"
+                        context="{'group_by':'crossovered_budget_id'}"/>
             </search>
         </field>
     </record>

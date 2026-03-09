@@ -42,10 +42,10 @@ class CrossoveredBudget(models.Model):
     _description = "Budget"
     _inherit = ['mail.thread']
 
-    name = fields.Char('Budget Name', required=True, states={'done': [('readonly', True)]})
+    name = fields.Char('Budget Name', required=True)
     user_id = fields.Many2one('res.users', 'Responsible', default=lambda self: self.env.user)
-    date_from = fields.Date('Start Date', required=True, states={'done': [('readonly', True)]})
-    date_to = fields.Date('End Date', required=True, states={'done': [('readonly', True)]})
+    date_from = fields.Date('Start Date', required=True)
+    date_to = fields.Date('End Date', required=True)
     state = fields.Selection([
         ('draft', 'Draft'),
         ('cancel', 'Cancelled'),
@@ -54,7 +54,7 @@ class CrossoveredBudget(models.Model):
         ('done', 'Done')
         ], 'Status', default='draft', index=True, required=True, readonly=True, copy=False, tracking=True)
     crossovered_budget_line = fields.One2many('crossovered.budget.lines', 'crossovered_budget_id', 'Budget Lines',
-        states={'done': [('readonly', True)]}, copy=True)
+        copy=True)
     company_id = fields.Many2one('res.company', 'Company', required=True, default=lambda self: self.env.company)
 
     def action_budget_confirm(self):
@@ -80,7 +80,7 @@ class CrossoveredBudgetLines(models.Model):
     name = fields.Char(compute='_compute_line_name')
     crossovered_budget_id = fields.Many2one('crossovered.budget', 'Budget', ondelete='cascade', index=True, required=True)
     analytic_account_id = fields.Many2one('account.analytic.account', 'Analytic Account')
-    analytic_plan_id = fields.Many2one('account.analytic.group', 'Analytic Plan', related='analytic_account_id.plan_id', readonly=True)
+    analytic_plan_id = fields.Many2one('account.analytic.plan', 'Analytic Plan', related='analytic_account_id.plan_id', readonly=True)
     general_budget_id = fields.Many2one('account.budget.post', 'Budgetary Position')
     date_from = fields.Date('Start Date', required=True)
     date_to = fields.Date('End Date', required=True)
