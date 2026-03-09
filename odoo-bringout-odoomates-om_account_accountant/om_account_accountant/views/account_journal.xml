@@ -6,10 +6,10 @@
         <field name="model">account.journal</field>
         <field name="inherit_id" ref="account.view_account_journal_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='inbound_payment_method_line_ids']/tree/field[@name='payment_account_id']" position="attributes">
+            <xpath expr="//field[@name='inbound_payment_method_line_ids']/list/field[@name='payment_account_id']" position="attributes">
                 <attribute name="optional">show</attribute>
             </xpath>
-            <xpath expr="//field[@name='outbound_payment_method_line_ids']/tree/field[@name='payment_account_id']" position="attributes">
+            <xpath expr="//field[@name='outbound_payment_method_line_ids']/list/field[@name='payment_account_id']" position="attributes">
                 <attribute name="optional">show</attribute>
             </xpath>
         </field>
@@ -45,7 +45,7 @@
             <field name="res_model">account.move.line</field>
             <field name="domain">[('display_type', 'not in', ('line_section', 'line_note'))]</field>
             <field name="view_id" ref="account.view_move_line_tree_grouped_misc"/>
-            <field name="view_mode">tree,pivot,graph,kanban</field>
+            <field name="view_mode">list,pivot,graph,kanban</field>
     </record>
 
 </odoo>

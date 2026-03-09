@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Odoo 16 Budget Management',
+    'name': 'Odoo 19 Budget Management',
     'author': 'Odoo Mates, Odoo SA',
     'category': 'Accounting',
-    'version': '16.0.1.0.0',
+    'version': '19.0.1.0.0',
     'description': """Use budgets to compare actual with expected revenues and costs""",
     'summary': 'Odoo 16 Budget Management',
     'sequence': 10,

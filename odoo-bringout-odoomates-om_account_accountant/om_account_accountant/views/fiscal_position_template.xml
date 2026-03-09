@@ -5,7 +5,7 @@
     <record id="action_account_fiscal_position_template" model="ir.actions.act_window">
             <field name="name">Fiscal Position Templates</field>
             <field name="res_model">account.fiscal.position.template</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
     </record>
 
     <menuitem id="menu_account_fiscal_position_template"

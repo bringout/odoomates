@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Odoo 16 Accounting',
-    'version': '1.0.0',
+    'name': 'Odoo 19 Accounting',
+    'version': '19.0.1.0.0',
     'category': 'Accounting',
     'summary': 'Accounting Reports, Asset Management and Account Budget, Recurring Payments, '
                'Lock Dates, Fiscal Year For Odoo 16 Community Edition, Accounting Dashboard, Financial Reports, '
