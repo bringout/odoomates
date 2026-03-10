@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <menuitem id="account.menu_finance" name="Accounting"/>
+    <menuitem id="account.menu_finance" name="Accounting"
+              groups="account.group_account_readonly,account.group_account_invoice,account.group_account_manager"/>
 
     <menuitem id="menu_account_templates"
               sequence="100"
