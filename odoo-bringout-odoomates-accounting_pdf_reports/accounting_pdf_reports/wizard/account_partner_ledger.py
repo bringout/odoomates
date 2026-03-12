@@ -8,11 +8,12 @@ class AccountPartnerLedger(models.TransientModel):
     _inherit = "account.common.partner.report"
     _description = "Account Partner Ledger"
 
+    result_selection = fields.Selection(selection_add=[], default='customer_supplier')
     amount_currency = fields.Boolean("With Currency",
                                      help="It adds the currency column on "
                                           "report if the currency differs from "
                                           "the company currency.")
-    reconciled = fields.Boolean('Reconciled Entries')
+    reconciled = fields.Boolean('Reconciled Entries', default=True)
     previous_balance = fields.Boolean('Previous Balance', default=True,
                                       help="Show previous balance before the start date.")
 
