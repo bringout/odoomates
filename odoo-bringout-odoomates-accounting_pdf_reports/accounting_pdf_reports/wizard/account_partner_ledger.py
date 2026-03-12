@@ -18,8 +18,12 @@ class AccountPartnerLedger(models.TransientModel):
 
     def _get_report_base_filename(self):
         if self.partner_ids:
-            return _('Kartica partnera') + ' ' + ', '.join(self.partner_ids.mapped('name'))
-        return _('Kartica partnera')
+            names = '_'.join(
+                name.replace(' ', '_').replace('/', '_').replace('\\', '_')
+                for name in self.partner_ids.mapped('name')
+            )
+            return 'Kartica_partnera_' + names
+        return 'Kartica_partnera'
 
     def _get_report_data(self, data):
         data = self.pre_print_report(data)
