@@ -18,7 +18,7 @@ class AccountPartnerLedger(models.TransientModel):
                                       help="Show previous balance before the start date.")
 
     def _get_report_base_filename(self):
-        base = _('Partner Ledger').replace(' ', '_')
+        base = 'Kartica_partnera'
         if self.partner_ids:
             names = '_'.join(
                 name.replace(' ', '_').replace('/', '_').replace('\\', '_')
