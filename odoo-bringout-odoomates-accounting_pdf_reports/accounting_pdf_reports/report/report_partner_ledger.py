@@ -29,6 +29,10 @@ class ReportPartnerLedger(models.AbstractModel):
         self.env.cr.execute(query, tuple(params))
         res = self.env.cr.dictfetchall()
         sum = 0.0
+        # Start running balance from previous balance if enabled
+        if data['form'].get('previous_balance') and data['form'].get('date_from'):
+            prev_bal = self._previous_balance(data, partner)
+            sum = prev_bal.get('balance', 0.0)
         lang_code = self.env.context.get('lang') or 'en_US'
         lang = self.env['res.lang']
         lang_id = lang._lang_get(lang_code)
