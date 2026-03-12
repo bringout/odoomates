@@ -13,6 +13,8 @@ class AccountPartnerLedger(models.TransientModel):
                                           "report if the currency differs from "
                                           "the company currency.")
     reconciled = fields.Boolean('Reconciled Entries')
+    previous_balance = fields.Boolean('Previous Balance', default=True,
+                                      help="Show previous balance before the start date.")
 
     def _get_report_base_filename(self):
         if self.partner_ids:
@@ -22,7 +24,8 @@ class AccountPartnerLedger(models.TransientModel):
     def _get_report_data(self, data):
         data = self.pre_print_report(data)
         data['form'].update({'reconciled': self.reconciled,
-                             'amount_currency': self.amount_currency})
+                             'amount_currency': self.amount_currency,
+                             'previous_balance': self.previous_balance})
         return data
 
     def _print_report(self, data):

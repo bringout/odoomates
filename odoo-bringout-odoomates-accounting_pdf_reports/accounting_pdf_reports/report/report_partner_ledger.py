@@ -45,6 +45,33 @@ class ReportPartnerLedger(models.AbstractModel):
             full_account.append(r)
         return full_account
 
+    def _previous_balance(self, data, partner):
+        """Calculate the balance for a partner before the date_from."""
+        date_from = data['form'].get('date_from')
+        if not date_from:
+            return {'debit': 0.0, 'credit': 0.0, 'balance': 0.0}
+
+        reconcile_clause = "" if data['form']['reconciled'] else ' AND "account_move_line".full_reconcile_id IS NULL '
+        params = [
+            partner.id,
+            tuple(data['computed']['move_state']),
+            tuple(data['computed']['account_ids']),
+            date_from,
+        ]
+        query = """
+            SELECT COALESCE(sum("account_move_line".debit), 0) as debit,
+                   COALESCE(sum("account_move_line".credit), 0) as credit,
+                   COALESCE(sum("account_move_line".debit - "account_move_line".credit), 0) as balance
+            FROM account_move_line
+            LEFT JOIN account_move m ON (m.id = "account_move_line".move_id)
+            WHERE "account_move_line".partner_id = %s
+                AND m.state IN %s
+                AND "account_move_line".account_id IN %s
+                AND "account_move_line".date < %s""" + reconcile_clause
+        self.env.cr.execute(query, tuple(params))
+        result = self.env.cr.dictfetchone()
+        return result or {'debit': 0.0, 'credit': 0.0, 'balance': 0.0}
+
     def _sum_partner(self, data, partner, field):
         if field not in ['debit', 'credit', 'debit - credit']:
             return
@@ -121,4 +148,5 @@ class ReportPartnerLedger(models.AbstractModel):
             'time': time,
             'lines': self._lines,
             'sum_partner': self._sum_partner,
+            'previous_balance': self._previous_balance,
         }

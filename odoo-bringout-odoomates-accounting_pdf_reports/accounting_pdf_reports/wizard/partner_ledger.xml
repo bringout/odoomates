@@ -17,6 +17,8 @@
                     <newline/>
                     <field name="reconciled"/>
                     <newline/>
+                    <field name="previous_balance"/>
+                    <newline/>
                 </xpath>
             </data>
         </field>

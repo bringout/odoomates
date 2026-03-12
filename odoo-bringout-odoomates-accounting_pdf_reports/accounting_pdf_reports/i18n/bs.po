@@ -540,7 +540,7 @@ msgstr ""
 
 #. module: accounting_pdf_reports
 #. odoo-python
-#: code:addons/accounting_pdf_reports/report/report_aged_partner.py
+#: code:addons/accounting_pdf_reports/report/report_aged_partner.py:0
 #, python-format
 msgid "Form content is missing, this report cannot be printed."
 msgstr "Nedostaju podaci sa forme, izvještaj se ne može ispisati."
@@ -868,6 +868,16 @@ msgid "Reconciled Entries"
 msgstr "Zatvorene stavke"
 
 #. module: accounting_pdf_reports
+#: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_report_partner_ledger__previous_balance
+msgid "Previous Balance"
+msgstr "Prethodno stanje"
+
+#. module: accounting_pdf_reports
+#: model:ir.model.fields,help:accounting_pdf_reports.field_account_report_partner_ledger__previous_balance
+msgid "Show previous balance before the start date."
+msgstr "Prikaži prethodno stanje prije početnog datuma."
+
+#. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_general_ledger
 msgid "Ref"
 msgstr "Opis"
@@ -1038,7 +1048,7 @@ msgstr "Tip"
 
 #. module: accounting_pdf_reports
 #. odoo-python
-#: code:addons/accounting_pdf_reports/report/report_aged_partner.py
+#: code:addons/accounting_pdf_reports/report/report_aged_partner.py:0
 #, python-format
 msgid "Unknown Partner"
 msgstr "Nepoznat partner"
@@ -1081,21 +1091,21 @@ msgstr ""
 
 #. module: accounting_pdf_reports
 #. odoo-python
-#: code:addons/accounting_pdf_reports/wizard/account_general_ledger.py
+#: code:addons/accounting_pdf_reports/wizard/account_general_ledger.py:0
 #, python-format
 msgid "You must define a Start Date"
 msgstr "You must define a Start Datum"
 
 #. module: accounting_pdf_reports
 #. odoo-python
-#: code:addons/accounting_pdf_reports/wizard/aged_partner.py
+#: code:addons/accounting_pdf_reports/wizard/aged_partner.py:0
 #, python-format
 msgid "You must set a period length greater than 0."
 msgstr "Morate postaviti dužinu perioda veću od 0."
 
 #. module: accounting_pdf_reports
 #. odoo-python
-#: code:addons/accounting_pdf_reports/wizard/aged_partner.py
+#: code:addons/accounting_pdf_reports/wizard/aged_partner.py:0
 #, python-format
 msgid "You must set a start date."
 msgstr "Morate postaviti početni datum."
