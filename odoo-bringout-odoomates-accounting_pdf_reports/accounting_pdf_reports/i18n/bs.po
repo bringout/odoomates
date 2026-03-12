@@ -764,7 +764,10 @@ msgid "Partner"
 msgstr "Partner"
 
 #. module: accounting_pdf_reports
+#. odoo-python
+#: code:addons/accounting_pdf_reports/wizard/account_partner_ledger.py:0
 #: model:ir.actions.act_window,name:accounting_pdf_reports.action_account_moves_ledger_partner
+#, python-format
 msgid "Partner Ledger"
 msgstr "Kartica partnera"
 
