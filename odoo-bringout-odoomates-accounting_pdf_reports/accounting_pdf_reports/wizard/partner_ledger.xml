@@ -11,6 +11,10 @@
                     <field name="partner_ids" widget="many2many_tags"
                            options="{'no_open': True, 'no_create': True}"/>
                 </xpath>
+                <xpath expr="//field[@name='journal_ids']" position="attributes">
+                    <attribute name="context">{'active_test': False}</attribute>
+                    <attribute name="domain">[('company_id', '=', company_id), ('active', 'in', [True, False])]</attribute>
+                </xpath>
                 <xpath expr="//field[@name='target_move']" position="after">
                     <field name="result_selection"/>
                     <field name="amount_currency" groups="base.group_multi_currency"/>
