@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from datetime import date
+
 from odoo import fields, models, api, _
 
 
@@ -24,6 +26,8 @@ class AccountPartnerLedger(models.TransientModel):
         default=lambda self: self.env['account.journal'].with_context(active_test=False).search(
             [('company_id', '=', self.company_id.id)]),
     )
+    date_from = fields.Date(default=lambda self: date(date.today().year, 1, 1))
+    date_to = fields.Date(default=lambda self: date(date.today().year, 12, 31))
 
     @api.onchange('company_id')
     def _onchange_company_id(self):
