@@ -19,6 +19,8 @@
                     <newline/>
                     <field name="previous_balance"/>
                     <newline/>
+                    <field name="group_by_account"/>
+                    <newline/>
                 </xpath>
             </data>
         </field>

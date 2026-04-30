@@ -16,6 +16,22 @@ class AccountPartnerLedger(models.TransientModel):
     reconciled = fields.Boolean('Reconciled Entries', default=True)
     previous_balance = fields.Boolean('Previous Balance', default=True,
                                       help="Show previous balance before the start date.")
+    group_by_account = fields.Boolean(
+        'Group by Account', default=True,
+        help="Print a separate partner ledger card per account. "
+             "When disabled, all accounts of the partner are merged into one card.")
+    journal_ids = fields.Many2many(
+        default=lambda self: self.env['account.journal'].with_context(active_test=False).search(
+            [('company_id', '=', self.company_id.id)]),
+    )
+
+    @api.onchange('company_id')
+    def _onchange_company_id(self):
+        if self.company_id:
+            self.journal_ids = self.env['account.journal'].with_context(active_test=False).search(
+                [('company_id', '=', self.company_id.id)])
+        else:
+            self.journal_ids = self.env['account.journal'].with_context(active_test=False).search([])
 
     def _get_report_base_filename(self):
         report = self.env.ref(
@@ -35,7 +51,8 @@ class AccountPartnerLedger(models.TransientModel):
         data = self.pre_print_report(data)
         data['form'].update({'reconciled': self.reconciled,
                              'amount_currency': self.amount_currency,
-                             'previous_balance': self.previous_balance})
+                             'previous_balance': self.previous_balance,
+                             'group_by_account': self.group_by_account})
         return data
 
     def _print_report(self, data):

@@ -304,9 +304,9 @@ msgid "Childrens"
 msgstr "Djeca"
 
 #. module: accounting_pdf_reports
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal_entries
 msgid "Code"
-msgstr "Konto"
+msgstr "Šifra"
 
 #. module: accounting_pdf_reports
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_accounting_report__label_filter
@@ -321,7 +321,7 @@ msgstr "Standardni izvještaj žurnala"
 #. module: accounting_pdf_reports
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_aged_trial_balance__company_id
 msgid "Company"
-msgstr "Preduzeće"
+msgstr "Kompanija"
 
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.accounting_report_view
@@ -421,7 +421,7 @@ msgstr "Display Duguje/Potražuje Columns"
 #. module: accounting_pdf_reports
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_account_type__display_name
 msgid "Display Name"
-msgstr "Prikazani naziv"
+msgstr "Naziv za prikaz"
 
 #. module: accounting_pdf_reports
 #: model:ir.model.fields.selection,name:accounting_pdf_reports.selection__account_financial_report__display_detail__detail_flat
@@ -611,7 +611,7 @@ msgstr "ŽURN"
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal
 msgid "Journal"
-msgstr "Žurnal"
+msgstr "Dnevnik"
 
 #. module: accounting_pdf_reports
 #: model:ir.model.fields.selection,name:accounting_pdf_reports.selection__account_report_general_ledger__sortby__sort_journal_partner
@@ -666,7 +666,7 @@ msgstr "Oznaka"
 #. module: accounting_pdf_reports
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_account_type____last_update
 msgid "Last Modified on"
-msgstr "Zadnje mijenjano"
+msgstr "Zadnja izmjena"
 
 #. module: accounting_pdf_reports
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_account_type__write_uid
@@ -706,7 +706,7 @@ msgstr "Knjiženje"
 #. module: accounting_pdf_reports
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_account_type__name
 msgid "Name"
-msgstr "Ime"
+msgstr "Naziv"
 
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
@@ -766,7 +766,6 @@ msgstr "Partner"
 #. module: accounting_pdf_reports
 #. odoo-python
 #: code:addons/accounting_pdf_reports/wizard/account_partner_ledger.py:0
-#: model:ir.actions.act_window,name:accounting_pdf_reports.action_account_moves_ledger_partner
 #, python-format
 msgid "Partner Ledger"
 msgstr "Kartica partnera"
@@ -938,7 +937,7 @@ msgstr "Prodaja"
 #. module: accounting_pdf_reports
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_financial_report__sequence
 msgid "Sequence"
-msgstr "Sekvenca"
+msgstr "Redoslijed"
 
 #. module: accounting_pdf_reports
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_financial_report__sign
@@ -1112,3 +1111,162 @@ msgstr "Morate postaviti dužinu perioda veću od 0."
 #, python-format
 msgid "You must set a start date."
 msgstr "Morate postaviti početni datum."
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "<strong>Datum do :</strong>"
+msgstr "<strong>Datum do :</strong>"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "<strong>Datum do:</strong>"
+msgstr "<strong>Datum do:</strong>"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "<strong>Datum od :</strong>"
+msgstr "<strong>Datum od :</strong>"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "<strong>Datum od:</strong>"
+msgstr "<strong>Datum od:</strong>"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "<strong>Knjiženja:</strong>"
+msgstr "<strong>Knjiženja:</strong>"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "<strong>Nabavke</strong>"
+msgstr "<strong>Nabavke</strong>"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "<strong>Partner:</strong>"
+msgstr "<strong>Partner:</strong>"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "<strong>Preduzeće:</strong>"
+msgstr "<strong>Preduzeće:</strong>"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "<strong>Transakcije:</strong>"
+msgstr "<strong>Transakcije:</strong>"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Datum"
+msgstr "Datum"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Duguje ("
+msgstr "Duguje ("
+
+#. module: accounting_pdf_reports
+#: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_report_partner_ledger__group_by_account
+msgid "Group by Account"
+msgstr "Grupiši po karticama"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Kartica partnera:"
+msgstr "Kartica partnera:"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Naziv konta"
+msgstr "Naziv konta"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Opis"
+msgstr "Opis"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "Osnovica"
+msgstr "Osnovica"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "PDV"
+msgstr "PDV"
+
+#. module: accounting_pdf_reports
+#: model:ir.model,name:accounting_pdf_reports.model_report_accounting_pdf_reports_report_tax
+msgid "PDV izvještaj"
+msgstr "PDV izvještaj"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Potražuje ("
+msgstr "Potražuje ("
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Prethodno stanje do"
+msgstr "Prethodno stanje do"
+
+#. module: accounting_pdf_reports
+#: model:ir.model.fields,help:accounting_pdf_reports.field_account_report_partner_ledger__group_by_account
+msgid ""
+"Print a separate partner ledger card per account. When disabled, all "
+"accounts of the partner are merged into one card."
+msgstr ""
+"Štampa zasebnu karticu partnera za svaki konto. Kada je isključeno, svi "
+"konti partnera se spajaju u jednu karticu."
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "Prodaja"
+msgstr "Prodaja"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Saldo ("
+msgstr "Saldo ("
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Samo proknjižene stavke"
+msgstr "Samo proknjižene stavke"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Sve proknjižene stavke"
+msgstr "Sve proknjižene stavke"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "Sve stavke"
+msgstr "Sve stavke"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "Sve što je proknjiženo"
+msgstr "Sve što je proknjiženo"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Valuta"
+msgstr "Valuta"
+
+#. module: accounting_pdf_reports
+#: model:ir.actions.report,print_report_name:accounting_pdf_reports.action_report_partnerledger
+msgid "object._get_report_base_filename()"
+msgstr "object._get_report_base_filename()"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "ŽURN"
+msgstr "ŽURN"
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "— Konto"
+msgstr "— Konto"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-26 14:31+0000\n"
-"PO-Revision-Date: 2024-04-26 14:31+0000\n"
+"POT-Creation-Date: 2026-04-30 10:21+0000\n"
+"PO-Revision-Date: 2026-04-30 10:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -38,16 +38,12 @@ msgstr ""
 
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
 msgid "<strong>Company:</strong>"
 msgstr ""
 
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_financial
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_general_ledger
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_trialbalance
 msgid "<strong>Date from :</strong>"
 msgstr ""
@@ -55,10 +51,28 @@ msgstr ""
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_financial
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_general_ledger
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_trialbalance
 msgid "<strong>Date to :</strong>"
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "<strong>Datum do :</strong>"
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "<strong>Datum do:</strong>"
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "<strong>Datum od :</strong>"
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "<strong>Datum od:</strong>"
 msgstr ""
 
 #. module: accounting_pdf_reports
@@ -88,8 +102,23 @@ msgid "<strong>Journals:</strong>"
 msgstr ""
 
 #. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "<strong>Knjiženja:</strong>"
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "<strong>Nabavke</strong>"
+msgstr ""
+
+#. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_agedpartnerbalance
 msgid "<strong>Partner's:</strong>"
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "<strong>Partner:</strong>"
 msgstr ""
 
 #. module: accounting_pdf_reports
@@ -98,8 +127,9 @@ msgid "<strong>Period Length (days)</strong>"
 msgstr ""
 
 #. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
-msgid "<strong>Purchase</strong>"
+msgid "<strong>Preduzeće:</strong>"
 msgstr ""
 
 #. module: accounting_pdf_reports
@@ -117,8 +147,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_financial
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_general_ledger
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_trialbalance
 msgid "<strong>Target Moves:</strong>"
 msgstr ""
@@ -129,19 +157,15 @@ msgid "<strong>Total</strong>"
 msgstr ""
 
 #. module: accounting_pdf_reports
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal_entries
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_trialbalance
-msgid "Account"
+msgid "<strong>Transakcije:</strong>"
 msgstr ""
 
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal_entries
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_trialbalance
-msgid "Code"
+msgid "Account"
 msgstr ""
 
 #. module: accounting_pdf_reports
@@ -270,8 +294,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_financial
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_general_ledger
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_trialbalance
 msgid "All Entries"
 msgstr ""
@@ -292,8 +314,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_financial
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_general_ledger
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_trialbalance
 msgid "All Posted Entries"
 msgstr ""
@@ -339,7 +359,6 @@ msgstr ""
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_financial
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_general_ledger
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_trialbalance
 msgid "Balance"
 msgstr ""
@@ -385,6 +404,7 @@ msgid "Childrens"
 msgstr ""
 
 #. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal_entries
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_trialbalance
 msgid "Code"
 msgstr ""
@@ -464,7 +484,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_general_ledger
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal_entries
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_trialbalance
 msgid "Credit"
 msgstr ""
@@ -478,7 +497,6 @@ msgstr ""
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_general_ledger
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
 msgid "Currency"
 msgstr ""
 
@@ -507,7 +525,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_general_ledger
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal_entries
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
 msgid "Date"
 msgstr ""
 
@@ -534,11 +551,15 @@ msgid "Dates"
 msgstr ""
 
 #. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Datum"
+msgstr ""
+
+#. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_financial
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_general_ledger
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal_entries
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_trialbalance
 msgid "Debit"
 msgstr ""
@@ -594,13 +615,8 @@ msgid "Display details"
 msgstr ""
 
 #. module: accounting_pdf_reports
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.res_config_settings_view_form
-msgid "Drill Down Reports"
-msgstr ""
-
-#. module: accounting_pdf_reports
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.res_config_settings_view_form
-msgid "Dynamic Accounting Reports"
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Duguje ("
 msgstr ""
 
 #. module: accounting_pdf_reports
@@ -623,11 +639,6 @@ msgid "End Date"
 msgstr ""
 
 #. module: accounting_pdf_reports
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.res_config_settings_view_form
-msgid "Enhanced Financial Reports"
-msgstr ""
-
-#. module: accounting_pdf_reports
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_print_journal__sort_selection
 msgid "Entries Sorted by"
 msgstr ""
@@ -641,11 +652,6 @@ msgstr ""
 #: model:account.account.type,name:accounting_pdf_reports.data_account_type_equity
 #: model:ir.model.fields.selection,name:accounting_pdf_reports.selection__account_account_type__type__equity
 msgid "Equity"
-msgstr ""
-
-#. module: accounting_pdf_reports
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.res_config_settings_view_form
-msgid "Excel Reports"
 msgstr ""
 
 #. module: accounting_pdf_reports
@@ -680,11 +686,6 @@ msgstr ""
 #: model:ir.ui.menu,name:accounting_pdf_reports.menu_finance_legal_statement
 #: model:ir.ui.menu,name:accounting_pdf_reports.menu_finance_reports_settings
 msgid "Financial Reports"
-msgstr ""
-
-#. module: accounting_pdf_reports
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.res_config_settings_view_form
-msgid "Financial Reports in Excel"
 msgstr ""
 
 #. module: accounting_pdf_reports
@@ -734,6 +735,11 @@ msgstr ""
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.view_account_financial_report_search
 msgid "Group By"
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_report_partner_ledger__group_by_account
+msgid "Group by Account"
 msgstr ""
 
 #. module: accounting_pdf_reports
@@ -791,7 +797,6 @@ msgstr ""
 
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_general_ledger
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
 msgid "JRNL"
 msgstr ""
 
@@ -856,6 +861,11 @@ msgstr ""
 #. module: accounting_pdf_reports
 #: model:ir.actions.report,name:accounting_pdf_reports.action_report_journal_entries
 msgid "Journals Entries"
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Kartica partnera:"
 msgstr ""
 
 #. module: accounting_pdf_reports
@@ -950,8 +960,8 @@ msgid "Name"
 msgstr ""
 
 #. module: accounting_pdf_reports
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
-msgid "Net"
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Naziv konta"
 msgstr ""
 
 #. module: accounting_pdf_reports
@@ -988,9 +998,30 @@ msgid "Off-Balance Sheet"
 msgstr ""
 
 #. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Opis"
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "Osnovica"
+msgstr ""
+
+#. module: accounting_pdf_reports
 #: model:account.account.type,name:accounting_pdf_reports.data_account_type_other_income
 #: model:ir.model.fields.selection,name:accounting_pdf_reports.selection__account_account_type__type__income_other
 msgid "Other Income"
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "PDV"
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model:ir.model,name:accounting_pdf_reports.model_report_accounting_pdf_reports_report_tax
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "PDV izvještaj"
 msgstr ""
 
 #. module: accounting_pdf_reports
@@ -1011,12 +1042,14 @@ msgid "Partner"
 msgstr ""
 
 #. module: accounting_pdf_reports
+#. odoo-python
+#: code:addons/accounting_pdf_reports/wizard/account_partner_ledger.py:0
 #: model:ir.actions.act_window,name:accounting_pdf_reports.action_account_moves_ledger_partner
 #: model:ir.actions.act_window,name:accounting_pdf_reports.action_account_partner_ledger_menu
 #: model:ir.actions.report,name:accounting_pdf_reports.action_report_partnerledger
 #: model:ir.ui.menu,name:accounting_pdf_reports.menu_action_account_moves_ledger_partner
 #: model:ir.ui.menu,name:accounting_pdf_reports.menu_partner_ledger
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+#, python-format
 msgid "Partner Ledger"
 msgstr ""
 
@@ -1073,6 +1106,11 @@ msgid "Period Length (days)"
 msgstr ""
 
 #. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Potražuje ("
+msgstr ""
+
+#. module: accounting_pdf_reports
 #: model:account.account.type,name:accounting_pdf_reports.data_account_type_prepayments
 #: model:ir.model.fields.selection,name:accounting_pdf_reports.selection__account_account_type__type__asset_prepayments
 msgid "Prepayments"
@@ -1084,8 +1122,13 @@ msgid "Preserve balance sign"
 msgstr ""
 
 #. module: accounting_pdf_reports
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.res_config_settings_view_form
-msgid "Preview financial reports without downloading"
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Prethodno stanje do"
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_report_partner_ledger__previous_balance
+msgid "Previous Balance"
 msgstr ""
 
 #. module: accounting_pdf_reports
@@ -1101,6 +1144,18 @@ msgstr ""
 msgid ""
 "Print Report with the currency column if the currency differs from the "
 "company currency."
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model:ir.model.fields,help:accounting_pdf_reports.field_account_report_partner_ledger__group_by_account
+msgid ""
+"Print a separate partner ledger card per account. When disabled, all "
+"accounts of the partner are merged into one card."
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "Prodaja"
 msgstr ""
 
 #. module: accounting_pdf_reports
@@ -1144,7 +1199,6 @@ msgstr ""
 
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_general_ledger
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
 msgid "Ref"
 msgstr ""
 
@@ -1197,13 +1251,23 @@ msgid "Reverse balance sign"
 msgstr ""
 
 #. module: accounting_pdf_reports
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
-msgid "Sale"
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Saldo ("
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Samo proknjižene stavke"
 msgstr ""
 
 #. module: accounting_pdf_reports
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_financial_report__sequence
 msgid "Sequence"
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model:ir.model.fields,help:accounting_pdf_reports.field_account_report_partner_ledger__previous_balance
+msgid "Show previous balance before the start date."
 msgstr ""
 
 #. module: accounting_pdf_reports
@@ -1236,6 +1300,21 @@ msgid "Start Date"
 msgstr ""
 
 #. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Sve proknjižene stavke"
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "Sve stavke"
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
+msgid "Sve što je proknjiženo"
+msgstr ""
+
+#. module: accounting_pdf_reports
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_aged_trial_balance__target_move
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_balance_report__target_move
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_common_account_report__target_move
@@ -1251,11 +1330,6 @@ msgid "Target Moves"
 msgstr ""
 
 #. module: accounting_pdf_reports
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
-msgid "Tax"
-msgstr ""
-
-#. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal
 msgid "Tax Amount"
 msgstr ""
@@ -1268,9 +1342,7 @@ msgstr ""
 #. module: accounting_pdf_reports
 #: model:ir.actions.report,name:accounting_pdf_reports.action_report_account_tax
 #: model:ir.model,name:accounting_pdf_reports.model_account_tax_report_wizard
-#: model:ir.model,name:accounting_pdf_reports.model_report_accounting_pdf_reports_report_tax
 #: model:ir.ui.menu,name:accounting_pdf_reports.menu_account_report
-#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_tax
 msgid "Tax Report"
 msgstr ""
 
@@ -1343,6 +1415,11 @@ msgid "Unknown Partner"
 msgstr ""
 
 #. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "Valuta"
+msgstr ""
+
+#. module: accounting_pdf_reports
 #: model:ir.model.fields.selection,name:accounting_pdf_reports.selection__account_financial_report__type__sum
 msgid "View"
 msgstr ""
@@ -1403,4 +1480,19 @@ msgstr ""
 #: code:addons/accounting_pdf_reports/wizard/aged_partner.py:0
 #, python-format
 msgid "You must set a start date."
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model:ir.actions.report,print_report_name:accounting_pdf_reports.action_report_partnerledger
+msgid "object._get_report_base_filename()"
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "ŽURN"
+msgstr ""
+
+#. module: accounting_pdf_reports
+#: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_partnerledger
+msgid "— Konto"
 msgstr ""
