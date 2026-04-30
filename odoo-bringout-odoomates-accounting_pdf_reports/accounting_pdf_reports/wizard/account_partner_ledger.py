@@ -32,18 +32,16 @@ class AccountPartnerLedger(models.TransientModel):
              "When disabled, all accounts of the partner are merged into one card.")
     journal_ids = fields.Many2many(
         default=lambda self: self.env['account.journal'].with_context(active_test=False).search(
-            [('company_id', '=', self.company_id.id)]),
+            [('company_id', '=', self.env.company.id)]),
     )
     date_from = fields.Date(default=lambda self: date(_default_report_year(), 1, 1))
     date_to = fields.Date(default=lambda self: date(_default_report_year(), 12, 31))
 
     @api.onchange('company_id')
     def _onchange_company_id(self):
-        if self.company_id:
-            self.journal_ids = self.env['account.journal'].with_context(active_test=False).search(
-                [('company_id', '=', self.company_id.id)])
-        else:
-            self.journal_ids = self.env['account.journal'].with_context(active_test=False).search([])
+        company = self.company_id or self.env.company
+        self.journal_ids = self.env['account.journal'].with_context(active_test=False).search(
+            [('company_id', '=', company.id)])
 
     def _get_report_base_filename(self):
         report = self.env.ref(
