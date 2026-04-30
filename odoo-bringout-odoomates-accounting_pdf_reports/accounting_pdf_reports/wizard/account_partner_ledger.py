@@ -2,7 +2,15 @@
 
 from datetime import date
 
+from dateutil.relativedelta import relativedelta
+
 from odoo import fields, models, api, _
+
+
+def _default_report_year():
+    # Shift today by -2 months so January/February still default to the
+    # previous calendar year (closing-period reports for the prior year).
+    return (date.today() - relativedelta(months=2)).year
 
 
 class AccountPartnerLedger(models.TransientModel):
@@ -26,8 +34,8 @@ class AccountPartnerLedger(models.TransientModel):
         default=lambda self: self.env['account.journal'].with_context(active_test=False).search(
             [('company_id', '=', self.company_id.id)]),
     )
-    date_from = fields.Date(default=lambda self: date(date.today().year, 1, 1))
-    date_to = fields.Date(default=lambda self: date(date.today().year, 12, 31))
+    date_from = fields.Date(default=lambda self: date(_default_report_year(), 1, 1))
+    date_to = fields.Date(default=lambda self: date(_default_report_year(), 12, 31))
 
     @api.onchange('company_id')
     def _onchange_company_id(self):
