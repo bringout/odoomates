@@ -63,7 +63,7 @@ msgstr "Konta"
 #. module: om_account_daily_reports
 #: model:ir.model.fields.selection,name:om_account_daily_reports.selection__account_bankbook_report__display_account__all
 msgid "All"
-msgstr "Sve"
+msgstr "Svi"
 
 #. module: om_account_daily_reports
 #: model:ir.model.fields.selection,name:om_account_daily_reports.selection__account_bankbook_report__target_move__all
@@ -78,7 +78,7 @@ msgstr "Saldo"
 #. module: om_account_daily_reports
 #: model:ir.actions.act_window,name:om_account_daily_reports.action_account_bankbook_menu
 msgid "Bank Book"
-msgstr "Bank Book"
+msgstr ""
 
 #. module: om_account_daily_reports
 #: model:ir.model,name:om_account_daily_reports.model_account_bankbook_report
@@ -93,7 +93,7 @@ msgstr "Otkaži"
 #. module: om_account_daily_reports
 #: model:ir.actions.act_window,name:om_account_daily_reports.action_account_cashbook_menu
 msgid "Cash Book"
-msgstr "Cash Book"
+msgstr ""
 
 #. module: om_account_daily_reports
 #: model:ir.model,name:om_account_daily_reports.model_account_cashbook_report
@@ -123,7 +123,7 @@ msgstr "Valuta"
 #. module: om_account_daily_reports
 #: model:ir.ui.menu,name:om_account_daily_reports.menu_finance_daily_reports
 msgid "Daily Reports"
-msgstr "Daily Reports"
+msgstr ""
 
 #. module: om_account_daily_reports
 #: model:ir.model.fields.selection,name:om_account_daily_reports.selection__account_bankbook_report__sortby__sort_date
@@ -133,7 +133,7 @@ msgstr "Datum"
 #. module: om_account_daily_reports
 #: model:ir.actions.act_window,name:om_account_daily_reports.action_account_daybook_menu
 msgid "Day Book"
-msgstr "Day Book"
+msgstr ""
 
 #. module: om_account_daily_reports
 #: model:ir.model,name:om_account_daily_reports.model_account_daybook_report
@@ -153,12 +153,12 @@ msgstr "Prikaži računs"
 #. module: om_account_daily_reports
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_bankbook_report__display_name
 msgid "Display Name"
-msgstr "Prikazani naziv"
+msgstr "Naziv za prikaz"
 
 #. module: om_account_daily_reports
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_bankbook_report__date_to
 msgid "End Date"
-msgstr "Datum završetka"
+msgstr "Završni datum"
 
 #. module: om_account_daily_reports
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_bankbook
@@ -167,7 +167,7 @@ msgstr "Entry Labela"
 
 #. module: om_account_daily_reports
 #. odoo-python
-#: code:addons/om_account_daily_reports/report/report_bankbook.py
+#: code:addons/om_account_daily_reports/report/report_bankbook.py:0
 #, python-format
 msgid "Form content is missing, this report cannot be printed."
 msgstr "Nedostaju podaci sa forme, izvještaj se ne može ispisati."
@@ -214,7 +214,7 @@ msgstr "Žurnali"
 #. module: om_account_daily_reports
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_bankbook_report____last_update
 msgid "Last Modified on"
-msgstr "Zadnje mijenjano"
+msgstr "Zadnja izmjena"
 
 #. module: om_account_daily_reports
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_bankbook_report__write_uid
@@ -229,7 +229,7 @@ msgstr "Zadnje ažurirano"
 #. module: om_account_daily_reports
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_bankbook
 msgid "Move"
-msgstr "Kretanje"
+msgstr "Knjiženje"
 
 #. module: om_account_daily_reports
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_bankbook
@@ -264,12 +264,12 @@ msgstr "Sortiraj po"
 #. module: om_account_daily_reports
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_bankbook_report__date_from
 msgid "Start Date"
-msgstr "Početni datum"
+msgstr "Početni Datum"
 
 #. module: om_account_daily_reports
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_bankbook_report__target_move
 msgid "Target Moves"
-msgstr "Ciljane stavke"
+msgstr "Transakcije"
 
 #. module: om_account_daily_reports
 #: model:ir.model.fields.selection,name:om_account_daily_reports.selection__account_bankbook_report__display_account__not_zero
