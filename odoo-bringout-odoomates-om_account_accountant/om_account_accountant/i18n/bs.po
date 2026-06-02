@@ -68,7 +68,7 @@ msgstr "Predlošci kontnog plana"
 #. module: om_account_accountant
 #: model:ir.model,name:om_account_accountant.model_res_config_settings
 msgid "Config Settings"
-msgstr "Postavke"
+msgstr "Postavke konfiguracije"
 
 #. module: om_account_accountant
 #: model_terms:ir.ui.view,arch_db:om_account_accountant.view_account_chart_template_form
@@ -98,7 +98,7 @@ msgstr "Konto prihoda"
 #. module: om_account_accountant
 #: model:ir.model,name:om_account_accountant.model_account_move
 msgid "Journal Entry"
-msgstr "Stavka dnevnika"
+msgstr "Knjiženje"
 
 #. module: om_account_accountant
 #: model:ir.ui.menu,name:om_account_accountant.menu_finance_entries_accounting_journals
@@ -148,7 +148,7 @@ msgstr "Dugovni saldo-konto"
 #. module: om_account_accountant
 #: model:ir.actions.server,name:om_account_accountant.action_account_reconciliation
 msgid "Reconcile"
-msgstr ""
+msgstr "Uskladi"
 
 #. module: om_account_accountant
 #: model_terms:ir.ui.view,arch_db:om_account_accountant.res_config_settings_view_form

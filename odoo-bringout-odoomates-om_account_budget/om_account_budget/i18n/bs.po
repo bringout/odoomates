@@ -199,7 +199,7 @@ msgstr "Valuta"
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post__display_name
 msgid "Display Name"
-msgstr "Naziv za prikaz"
+msgstr "Naziv prikaza"
 
 #. module: om_account_budget
 #: model:ir.model.fields.selection,name:om_account_budget.selection__crossovered_budget__state__done
@@ -274,17 +274,17 @@ msgstr "Je pratilac"
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post____last_update
 msgid "Last Modified on"
-msgstr "Zadnja izmjena"
+msgstr "Zadnji put izmijenjeno"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post__write_uid
 msgid "Last Updated by"
-msgstr "Zadnji ažurirao"
+msgstr "Zadnji put ažurirao"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_account_budget_post__write_date
 msgid "Last Updated on"
-msgstr "Zadnje ažurirano"
+msgstr "Zadnji put ažurirano"
 
 #. module: om_account_budget
 #: model:ir.model.fields,field_description:om_account_budget.field_crossovered_budget__message_main_attachment_id

@@ -87,7 +87,7 @@ msgstr "Opis ..."
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__display_name
 msgid "Display Name"
-msgstr "Naziv za prikaz"
+msgstr "Naziv prikaza"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields.selection,name:om_recurring_payments.selection__account_recurring_template__state__done
@@ -127,17 +127,17 @@ msgstr "Dnevnik"
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template____last_update
 msgid "Last Modified on"
-msgstr "Zadnja izmjena"
+msgstr "Zadnji put izmijenjeno"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__write_uid
 msgid "Last Updated by"
-msgstr "Zadnji ažurirao"
+msgstr "Zadnji put ažurirao"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields,field_description:om_recurring_payments.field_account_recurring_template__write_date
 msgid "Last Updated on"
-msgstr "Zadnje ažurirano"
+msgstr "Zadnji put ažurirano"
 
 #. module: om_recurring_payments
 #: model:ir.model.fields.selection,name:om_recurring_payments.selection__account_recurring_template__recurring_period__months

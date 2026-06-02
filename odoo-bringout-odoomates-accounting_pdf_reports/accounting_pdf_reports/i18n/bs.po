@@ -113,7 +113,7 @@ msgstr "<strong>Ukupno</strong>"
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal
 msgid "Account"
-msgstr "Naziv konta"
+msgstr "Konto"
 
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_journal
@@ -291,7 +291,7 @@ msgstr "Osnovica"
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.account_aged_balance_view
 msgid "Cancel"
-msgstr "Otkaži"
+msgstr "Odustani"
 
 #. module: accounting_pdf_reports
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_financial_report__children_ids
@@ -421,7 +421,7 @@ msgstr "Display Duguje/Potražuje Columns"
 #. module: accounting_pdf_reports
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_account_type__display_name
 msgid "Display Name"
-msgstr "Naziv za prikaz"
+msgstr "Naziv prikaza"
 
 #. module: accounting_pdf_reports
 #: model:ir.model.fields.selection,name:accounting_pdf_reports.selection__account_financial_report__display_detail__detail_flat
@@ -631,7 +631,7 @@ msgstr "Dnevnik Entry Number"
 #. module: accounting_pdf_reports
 #: model:ir.model,name:accounting_pdf_reports.model_account_move_line
 msgid "Journal Item"
-msgstr "Stavka žurnala"
+msgstr "Stavka dnevnika"
 
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_general_ledger
@@ -666,17 +666,17 @@ msgstr "Oznaka"
 #. module: accounting_pdf_reports
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_account_type____last_update
 msgid "Last Modified on"
-msgstr "Zadnja izmjena"
+msgstr "Zadnji put izmijenjeno"
 
 #. module: accounting_pdf_reports
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_account_type__write_uid
 msgid "Last Updated by"
-msgstr "Zadnji ažurirao"
+msgstr "Zadnji put ažurirao"
 
 #. module: accounting_pdf_reports
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_account_type__write_date
 msgid "Last Updated on"
-msgstr "Zadnje ažurirano"
+msgstr "Zadnji put ažurirano"
 
 #. module: accounting_pdf_reports
 #: model:ir.ui.menu,name:accounting_pdf_reports.menu_finance_entries_accounting_ledgers
@@ -798,7 +798,7 @@ msgstr "Partneri"
 #. module: accounting_pdf_reports
 #: model:account.account.type,name:accounting_pdf_reports.data_account_type_payable
 msgid "Payable"
-msgstr "Za naplatu"
+msgstr "Obveze"
 
 #. module: accounting_pdf_reports
 #: model:ir.model.fields.selection,name:accounting_pdf_reports.selection__account_aged_trial_balance__result_selection__supplier
@@ -852,7 +852,7 @@ msgstr "Dobit i gubitak"
 #. module: accounting_pdf_reports
 #: model:account.account.type,name:accounting_pdf_reports.data_account_type_receivable
 msgid "Receivable"
-msgstr "Kupci"
+msgstr "Potraživanja"
 
 #. module: accounting_pdf_reports
 #: model:ir.model.fields.selection,name:accounting_pdf_reports.selection__account_aged_trial_balance__result_selection__customer
@@ -1058,7 +1058,7 @@ msgstr "Nepoznat partner"
 #. module: accounting_pdf_reports
 #: model:ir.model.fields.selection,name:accounting_pdf_reports.selection__account_financial_report__type__sum
 msgid "View"
-msgstr "Pregled"
+msgstr "Prikaz"
 
 #. module: accounting_pdf_reports
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_common_journal_report__amount_currency

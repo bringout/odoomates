@@ -447,7 +447,7 @@ msgstr "Nakon"
 #: code:addons/om_account_followup/models/partner.py:0
 #, python-format
 msgid "Amount"
-msgstr "Iznos (KM)"
+msgstr "Iznos"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_res_partner__payment_amount_due
@@ -510,7 +510,7 @@ msgstr "Blokirano"
 #. module: om_account_followup
 #: model_terms:ir.ui.view,arch_db:om_account_followup.view_om_account_followup_print
 msgid "Cancel"
-msgstr "Otkaži"
+msgstr "Odustani"
 
 #. module: om_account_followup
 #: model:ir.model.fields,help:om_account_followup.field_followup_print__test_print
@@ -541,7 +541,7 @@ msgstr "Kompanija"
 #. module: om_account_followup
 #: model:ir.model,name:om_account_followup.model_res_config_settings
 msgid "Config Settings"
-msgstr "Postavke"
+msgstr "Postavke konfiguracije"
 
 #. module: om_account_followup
 #: model:ir.model,name:om_account_followup.model_res_partner
@@ -598,7 +598,7 @@ msgstr "Opis"
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_followup__display_name
 msgid "Display Name"
-msgstr "Naziv za prikaz"
+msgstr "Naziv prikaza"
 
 #. module: om_account_followup
 #: model:ir.ui.menu,name:om_account_followup.om_account_followup_s
@@ -846,7 +846,7 @@ msgstr "Podsjetnik računa"
 #. module: om_account_followup
 #: model:ir.model,name:om_account_followup.model_account_move_line
 msgid "Journal Item"
-msgstr "Stavka žurnala"
+msgstr "Stavka dnevnika"
 
 #. module: om_account_followup
 #: model:ir.actions.act_window,name:om_account_followup.account_manual_reconcile_action
@@ -856,17 +856,17 @@ msgstr "Dnevnik Artikli to Reconcile"
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_followup____last_update
 msgid "Last Modified on"
-msgstr "Zadnja izmjena"
+msgstr "Zadnji put izmijenjeno"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_followup__write_uid
 msgid "Last Updated by"
-msgstr "Zadnji ažurirao"
+msgstr "Zadnji put ažurirao"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_followup__write_date
 msgid "Last Updated on"
-msgstr "Zadnje ažurirano"
+msgstr "Zadnji put ažurirano"
 
 #. module: om_account_followup
 #: model:ir.model.fields,field_description:om_account_followup.field_followup_stat__date_move_last
