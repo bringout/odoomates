@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import models
+from odoo import models, fields
 
 # Kartica partnera (Partner Ledger). When run WITHOUT the HTML header
 # (use_header=False, the default) the body uses web.basic_layout, so Odoo passes
@@ -67,6 +67,12 @@ class IrActionsReport(models.Model):
                     continue
                 out.append(a)
                 i += 1
+            # Native footer: page numbers centered, local print date/time on the
+            # right (wkhtmltopdf's [date]/[time] use the system locale, so format
+            # it ourselves in the user's timezone as DD.MM.YYYY HH:MM).
+            stamp = fields.Datetime.context_timestamp(
+                self, fields.Datetime.now()).strftime('%d.%m.%Y %H:%M')
             args = out + ['--footer-center', 'Strana [page] / [topage]',
+                          '--footer-right', stamp,
                           '--footer-font-size', '7', '--footer-spacing', '3']
         return args
