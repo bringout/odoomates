@@ -45,6 +45,28 @@ class IrActionsReport(models.Model):
             specific_paperformat_args=specific_paperformat_args,
             set_viewport_size=set_viewport_size)
         if self.env.context.get('partnerledger_native_footer'):
-            args += ['--footer-center', 'Strana [page] / [topage]',
-                     '--footer-font-size', '7', '--footer-spacing', '3']
+            # Header-less mode: there is no per-page header to reserve space for,
+            # so reclaim the paperformat's large top margin (content starts near
+            # the top) and shrink the whole render ~15% (zoom) so more rows fit
+            # per page — the table still reflows to full width. Both apply ONLY
+            # here; the full-header mode (use_header=True) keeps its sizing.
+            out, i = [], 0
+            while i < len(args):
+                a = args[i]
+                if a == '--margin-top' and i + 1 < len(args):
+                    out += ['--margin-top', '6']
+                    i += 2
+                    continue
+                if a == '--zoom' and i + 1 < len(args):
+                    try:
+                        zoom = float(args[i + 1]) * 0.85
+                    except (TypeError, ValueError):
+                        zoom = 0.9
+                    out += ['--zoom', '%.4f' % zoom]
+                    i += 2
+                    continue
+                out.append(a)
+                i += 1
+            args = out + ['--footer-center', 'Strana [page] / [topage]',
+                          '--footer-font-size', '7', '--footer-spacing', '3']
         return args
