@@ -26,6 +26,18 @@ class IrActionsReport(models.Model):
             self = self.with_context(partnerledger_native_footer=True)
         return super()._render_qweb_pdf(report_ref, res_ids=res_ids, data=data)
 
+    def _prepare_html(self, html, report_model=False):
+        bodies, res_ids, header, footer, args = super()._prepare_html(
+            html, report_model=report_model)
+        # Header-less mode: drop the web.report_layout header/footer that
+        # html_container injects for EVERY layout (incl. basic_layout). That
+        # per-page header re-renders the full report CSS bundle and is what
+        # crashes wkhtmltopdf -11 on huge runs. Page numbers are restored by the
+        # native --footer-center added in _build_wkhtmltopdf_args.
+        if self.env.context.get('partnerledger_native_footer'):
+            header, footer = '', ''
+        return bodies, res_ids, header, footer, args
+
     def _build_wkhtmltopdf_args(self, paperformat_id, landscape,
                                specific_paperformat_args=None, set_viewport_size=False):
         args = super()._build_wkhtmltopdf_args(
