@@ -25,6 +25,8 @@
                     <newline/>
                     <field name="group_by_account"/>
                     <newline/>
+                    <field name="use_header"/>
+                    <newline/>
                 </xpath>
             </data>
         </field>

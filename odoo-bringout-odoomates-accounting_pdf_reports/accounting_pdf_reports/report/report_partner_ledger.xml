@@ -1,149 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <template id="report_partnerledger">
-        <t t-call="web.html_container">
-            <t t-call="web.internal_layout">
-                <style>
-                    .col-amount {
-                        width: 120px;
-                        min-width: 120px;
-                        text-align: right;
-                    }
-                </style>
-                <t t-set="currency_symbol" t-value="res_company.currency_id.symbol"/>
-                <t t-foreach="docs" t-as="o">
-                    <t t-foreach="kartice_for_partner(data, o)" t-as="acc">
-                        <div class="page" t-att-style="'page-break-before: always;' if not (o_first and acc_first) else ''">
-                            <h5 style="margin-top: 4px;">
-                                <strong>Kartica partnera: <t t-esc="o.name"/></strong>
-                                <t t-if="acc">
-                                    <strong> — Konto <t t-esc="acc.code"/> <t t-esc="acc.name"/></strong>
-                                </t>
-                            </h5>
-                            <div class="row">
-                                <div class="col-3">
-                                    <strong>Preduzeće:</strong>
-                                    <p t-esc="res_company.name"/>
-                                </div>
-                                <div class="col-3">
-                                    <strong>Partner:</strong>
-                                    <p>
+    <!-- Report body (no layout) — shared by both header modes below. -->
+    <template id="report_partnerledger_body">
+        <style>
+            .col-amount {
+                width: 120px;
+                min-width: 120px;
+                text-align: right;
+            }
+        </style>
+        <t t-set="currency_symbol" t-value="res_company.currency_id.symbol"/>
+        <t t-foreach="docs" t-as="o">
+            <t t-foreach="kartice_for_partner(data, o)" t-as="acc">
+                <div class="page" t-att-style="'page-break-before: always;' if not (o_first and acc_first) else ''">
+                    <h5 style="margin-top: 4px;">
+                        <strong>Kartica partnera: <t t-esc="o.name"/></strong>
+                        <t t-if="acc">
+                            <strong> — Konto <t t-esc="acc.code"/> <t t-esc="acc.name"/></strong>
+                        </t>
+                    </h5>
+                    <div class="row">
+                        <div class="col-3">
+                            <strong>Preduzeće:</strong>
+                            <p t-esc="res_company.name"/>
+                        </div>
+                        <div class="col-3">
+                            <strong>Partner:</strong>
+                            <p>
+                                <t t-if="o.ref"><t t-esc="o.ref"/> - </t>
+                                <t t-esc="o.name"/>
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <t t-if="data['form']['date_from']">
+                                <strong>Datum od:</strong>
+                                <span t-esc="data['form']['date_from']" t-options="{'widget': 'date'}"/>
+                                <br/>
+                            </t>
+                            <t t-if="data['form']['date_to']">
+                                <strong>Datum do:</strong>
+                                <span t-esc="data['form']['date_to']" t-options="{'widget': 'date'}"/>
+                            </t>
+                        </div>
+                        <div class="col-3">
+                            <strong>Transakcije:</strong>
+                            <p t-if="data['form']['target_move'] == 'all'">Sve proknjižene stavke</p>
+                            <p t-if="data['form']['target_move'] == 'posted'">Samo proknjižene stavke</p>
+                        </div>
+                    </div>
+
+                    <table class="table table-sm table-reports" style="margin-top: 2px;">
+                        <thead>
+                            <tr>
+                                <th>Datum</th>
+                                <th>ŽURN</th>
+                                <th>Naziv konta</th>
+                                <th>Opis</th>
+                                <th class="col-amount">Duguje (<t t-esc="currency_symbol"/>)</th>
+                                <th class="col-amount">Potražuje (<t t-esc="currency_symbol"/>)</th>
+                                <th class="col-amount">Saldo (<t t-esc="currency_symbol"/>)</th>
+                                <th class="col-amount" t-if="data['form']['amount_currency']">Valuta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="prev_bal" t-value="previous_balance(data, o, account=acc) if data['form'].get('previous_balance') and data['form'].get('date_from') else {'debit': 0.0, 'credit': 0.0, 'balance': 0.0}"/>
+                            <t t-if="data['form'].get('previous_balance') and data['form'].get('date_from')">
+                                <tr t-if="prev_bal['debit'] or prev_bal['credit'] or prev_bal['balance']" style="background-color: #f0f0f0; font-style: italic;">
+                                    <td colspan="4">
+                                        <strong>Prethodno stanje do <t t-esc="data['form']['date_from']" t-options="{'widget': 'date'}"/></strong>
+                                    </td>
+                                    <td class="col-amount">
+                                        <t t-esc="prev_bal['debit']"
+                                           t-options="{'widget': 'float', 'precision': 2}"/>
+                                    </td>
+                                    <td class="col-amount">
+                                        <t t-esc="prev_bal['credit']"
+                                           t-options="{'widget': 'float', 'precision': 2}"/>
+                                    </td>
+                                    <td class="col-amount">
+                                        <t t-esc="prev_bal['balance']"
+                                           t-options="{'widget': 'float', 'precision': 2}"/>
+                                    </td>
+                                    <td t-if="data['form']['amount_currency']"/>
+                                </tr>
+                            </t>
+                            <tr t-foreach="lines(data, o, account=acc)" t-as="line">
+                                <td>
+                                    <span t-esc="line['date']"/>
+                                </td>
+                                <td>
+                                    <span t-esc="line['code']"/>
+                                </td>
+                                <td>
+                                    <span t-esc="line['a_code']"/>
+                                </td>
+                                <td>
+                                    <span t-esc="line['displayed_name']"/>
+                                </td>
+                                <td class="col-amount">
+                                    <span t-esc="line['debit']"
+                                          t-options="{'widget': 'float', 'precision': 2}"/>
+                                </td>
+                                <td class="col-amount">
+                                    <span t-esc="line['credit']"
+                                          t-options="{'widget': 'float', 'precision': 2}"/>
+                                </td>
+                                <td class="col-amount">
+                                    <span t-esc="line['progress']"
+                                          t-options="{'widget': 'float', 'precision': 2}"/>
+                                </td>
+                                <td class="col-amount" t-if="data['form']['amount_currency']">
+                                    <t t-if="line['currency_id']">
+                                        <span t-esc="line['amount_currency']"
+                                              t-options="{'widget': 'float', 'precision': 2}"/>
+                                    </t>
+                                </td>
+                            </tr>
+                            <tr class="font-weight-bold" style="background-color: #fff9e6; border-top: 2px solid #333;">
+                                <td colspan="4">
+                                    <strong>
                                         <t t-if="o.ref"><t t-esc="o.ref"/> - </t>
                                         <t t-esc="o.name"/>
-                                    </p>
-                                </div>
-                                <div class="col-3">
-                                    <t t-if="data['form']['date_from']">
-                                        <strong>Datum od:</strong>
-                                        <span t-esc="data['form']['date_from']" t-options="{'widget': 'date'}"/>
-                                        <br/>
-                                    </t>
-                                    <t t-if="data['form']['date_to']">
-                                        <strong>Datum do:</strong>
-                                        <span t-esc="data['form']['date_to']" t-options="{'widget': 'date'}"/>
-                                    </t>
-                                </div>
-                                <div class="col-3">
-                                    <strong>Transakcije:</strong>
-                                    <p t-if="data['form']['target_move'] == 'all'">Sve proknjižene stavke</p>
-                                    <p t-if="data['form']['target_move'] == 'posted'">Samo proknjižene stavke</p>
-                                </div>
-                            </div>
+                                        <t t-if="acc"> — <t t-esc="acc.code"/></t>
+                                    </strong>
+                                </td>
+                                <td class="col-amount">
+                                    <strong><t t-esc="sum_partner(data, o, 'debit', account=acc) + prev_bal['debit']"
+                                       t-options="{'widget': 'float', 'precision': 2}"/></strong>
+                                </td>
+                                <td class="col-amount">
+                                    <strong><t t-esc="sum_partner(data, o, 'credit', account=acc) + prev_bal['credit']"
+                                       t-options="{'widget': 'float', 'precision': 2}"/></strong>
+                                </td>
+                                <td class="col-amount">
+                                    <strong><t t-esc="sum_partner(data, o, 'debit - credit', account=acc) + prev_bal['balance']"
+                                       t-options="{'widget': 'float', 'precision': 2}"/></strong>
+                                </td>
+                                <td t-if="data['form']['amount_currency']"/>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
 
-                            <table class="table table-sm table-reports" style="margin-top: 2px;">
-                                <thead>
-                                    <tr>
-                                        <th>Datum</th>
-                                        <th>ŽURN</th>
-                                        <th>Naziv konta</th>
-                                        <th>Opis</th>
-                                        <th class="col-amount">Duguje (<t t-esc="currency_symbol"/>)</th>
-                                        <th class="col-amount">Potražuje (<t t-esc="currency_symbol"/>)</th>
-                                        <th class="col-amount">Saldo (<t t-esc="currency_symbol"/>)</th>
-                                        <th class="col-amount" t-if="data['form']['amount_currency']">Valuta</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <t t-set="prev_bal" t-value="previous_balance(data, o, account=acc) if data['form'].get('previous_balance') and data['form'].get('date_from') else {'debit': 0.0, 'credit': 0.0, 'balance': 0.0}"/>
-                                    <t t-if="data['form'].get('previous_balance') and data['form'].get('date_from')">
-                                        <tr t-if="prev_bal['debit'] or prev_bal['credit'] or prev_bal['balance']" style="background-color: #f0f0f0; font-style: italic;">
-                                            <td colspan="4">
-                                                <strong>Prethodno stanje do <t t-esc="data['form']['date_from']" t-options="{'widget': 'date'}"/></strong>
-                                            </td>
-                                            <td class="col-amount">
-                                                <t t-esc="prev_bal['debit']"
-                                                   t-options="{'widget': 'float', 'precision': 2}"/>
-                                            </td>
-                                            <td class="col-amount">
-                                                <t t-esc="prev_bal['credit']"
-                                                   t-options="{'widget': 'float', 'precision': 2}"/>
-                                            </td>
-                                            <td class="col-amount">
-                                                <t t-esc="prev_bal['balance']"
-                                                   t-options="{'widget': 'float', 'precision': 2}"/>
-                                            </td>
-                                            <td t-if="data['form']['amount_currency']"/>
-                                        </tr>
-                                    </t>
-                                    <tr t-foreach="lines(data, o, account=acc)" t-as="line">
-                                        <td>
-                                            <span t-esc="line['date']"/>
-                                        </td>
-                                        <td>
-                                            <span t-esc="line['code']"/>
-                                        </td>
-                                        <td>
-                                            <span t-esc="line['a_code']"/>
-                                        </td>
-                                        <td>
-                                            <span t-esc="line['displayed_name']"/>
-                                        </td>
-                                        <td class="col-amount">
-                                            <span t-esc="line['debit']"
-                                                  t-options="{'widget': 'float', 'precision': 2}"/>
-                                        </td>
-                                        <td class="col-amount">
-                                            <span t-esc="line['credit']"
-                                                  t-options="{'widget': 'float', 'precision': 2}"/>
-                                        </td>
-                                        <td class="col-amount">
-                                            <span t-esc="line['progress']"
-                                                  t-options="{'widget': 'float', 'precision': 2}"/>
-                                        </td>
-                                        <td class="col-amount" t-if="data['form']['amount_currency']">
-                                            <t t-if="line['currency_id']">
-                                                <span t-esc="line['amount_currency']"
-                                                      t-options="{'widget': 'float', 'precision': 2}"/>
-                                            </t>
-                                        </td>
-                                    </tr>
-                                    <tr class="font-weight-bold" style="background-color: #fff9e6; border-top: 2px solid #333;">
-                                        <td colspan="4">
-                                            <strong>
-                                                <t t-if="o.ref"><t t-esc="o.ref"/> - </t>
-                                                <t t-esc="o.name"/>
-                                                <t t-if="acc"> — <t t-esc="acc.code"/></t>
-                                            </strong>
-                                        </td>
-                                        <td class="col-amount">
-                                            <strong><t t-esc="sum_partner(data, o, 'debit', account=acc) + prev_bal['debit']"
-                                               t-options="{'widget': 'float', 'precision': 2}"/></strong>
-                                        </td>
-                                        <td class="col-amount">
-                                            <strong><t t-esc="sum_partner(data, o, 'credit', account=acc) + prev_bal['credit']"
-                                               t-options="{'widget': 'float', 'precision': 2}"/></strong>
-                                        </td>
-                                        <td class="col-amount">
-                                            <strong><t t-esc="sum_partner(data, o, 'debit - credit', account=acc) + prev_bal['balance']"
-                                               t-options="{'widget': 'float', 'precision': 2}"/></strong>
-                                        </td>
-                                        <td t-if="data['form']['amount_currency']"/>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </t>
+    <!-- Wrapper: the "Zaglavlje na svakoj stranici" (use_header) wizard flag picks
+         the layout.
+         - OFF (default): web.basic_layout = NO per-page HTML header/footer, so
+           wkhtmltopdf does not re-render the report CSS bundle on every page and
+           survives huge runs (e.g. all partners = 600+ pages). Page numbers are
+           still shown via wkhtmltopdf's NATIVE footer, injected in
+           ir.actions.report._build_wkhtmltopdf_args (see report/ir_actions_report.py).
+         - ON: web.internal_layout = standard HTML header + page-number footer.
+           Only safe for small runs — large runs crash wkhtmltopdf with -11.
+         See profile/radix/docs/CASE_KARTICA_PARTNERA_MEMORY_ERROR.md. -->
+    <template id="report_partnerledger">
+        <t t-call="web.html_container">
+            <t t-if="data['form'].get('use_header')">
+                <t t-call="web.internal_layout">
+                    <t t-call="accounting_pdf_reports.report_partnerledger_body"/>
+                </t>
+            </t>
+            <t t-else="">
+                <t t-call="web.basic_layout">
+                    <t t-call="accounting_pdf_reports.report_partnerledger_body"/>
                 </t>
             </t>
         </t>

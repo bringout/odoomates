@@ -30,6 +30,14 @@ class AccountPartnerLedger(models.TransientModel):
         'Group by Account', default=True,
         help="Print a separate partner ledger card per account. "
              "When disabled, all accounts of the partner are merged into one card.")
+    use_header = fields.Boolean(
+        'Zaglavlje na svakoj stranici', default=False,
+        help="Uključi standardno HTML zaglavlje/podnožje na svakoj stranici. "
+             "OPREZ: kod velikih izvještaja (npr. svi partneri = stotine stranica) "
+             "wkhtmltopdf se ruši (greška -11) jer renderuje zaglavlje sa kompletnim "
+             "CSS-om na svakoj stranici. Ostavi ISKLJUČENO za velike izvještaje — "
+             "broj stranice se i tada prikazuje (nativno podnožje). Uključi samo za "
+             "manje izvještaje (jedan ili nekoliko partnera).")
     journal_ids = fields.Many2many(
         default=lambda self: self.env['account.journal'].with_context(active_test=False).search(
             [('company_id', '=', self.env.company.id)]),
@@ -62,7 +70,8 @@ class AccountPartnerLedger(models.TransientModel):
         data['form'].update({'reconciled': self.reconciled,
                              'amount_currency': self.amount_currency,
                              'previous_balance': self.previous_balance,
-                             'group_by_account': self.group_by_account})
+                             'group_by_account': self.group_by_account,
+                             'use_header': self.use_header})
         return data
 
     def _print_report(self, data):
