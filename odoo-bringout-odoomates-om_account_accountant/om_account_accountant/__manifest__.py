@@ -22,7 +22,7 @@
     'depends': [
         'accounting_pdf_reports',
         #'om_account_asset',
-        'om_account_budget',
+        #'om_account_budget',  # removed in v19 migration: no v19/OCA budget module, 0 budget data in bring.out prod
         #'om_fiscal_year',
         'om_recurring_payments',
         #'om_account_bank_statement_import', # koristimo OCA bank import
