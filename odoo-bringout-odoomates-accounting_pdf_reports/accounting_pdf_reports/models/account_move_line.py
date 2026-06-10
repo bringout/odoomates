@@ -9,7 +9,7 @@ class AccountMoveLine(models.Model):
 
     @api.model
     def _query_get(self, domain=None):
-        self.check_access_rights('read')
+        self.check_access('read')
 
         context = dict(self._context or {})
         domain = domain or []
@@ -71,10 +71,14 @@ class AccountMoveLine(models.Model):
             domain.append(('display_type', 'not in', ('line_section', 'line_note')))
             domain.append(('parent_state', '!=', 'cancel'))
 
-            query = self._where_calc(domain)
-
-            # Wrap the query with 'company_id IN (...)' to avoid bypassing company access rights.
-            self._apply_ir_rules(query)
-
-            tables, where_clause, where_clause_params = query.get_sql()
+            # v17+ dropped BaseModel._where_calc and Query.get_sql(). _search()
+            # returns a Query and already applies the record-level ir.rules (the
+            # "company_id IN (...)" company access wrap) + active_test, replacing
+            # the old _where_calc + _apply_ir_rules pair. Render the v19 SQL
+            # objects back to the (tables, where, params) tuple the report SQL
+            # builders below still concatenate.
+            query = self._search(domain)
+            tables = query.from_clause.code
+            where_clause = query.where_clause.code
+            where_clause_params = list(query.from_clause.params) + list(query.where_clause.params)
         return tables, where_clause, where_clause_params
